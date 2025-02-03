@@ -1,7 +1,93 @@
+/* Estilo do cabeçalho */
 .header {
-    background-color: #121212;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-  }
+  position: absolute;
+  top: 40px;
+  right: 30px;
+  z-index: 1000;
+}
+
+/* Botão de menu */
+.menu-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.menu-icon span {
+  width: 45px;
+  height: 2px;
+  background-color: #737373;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+/* Menu lateral */
+.menu {
+  position: fixed;
+  top: 0;
+  right: -400%; /* Fora da tela inicialmente */
+  width: 85%; /* O menu ocupa 80% da largura da tela */
+  height: 100vh;
+  background-color: #414141; /* Fundo escuro */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  color: #fff;
   
+}
+
+
+/* Menu aberto */
+.menu.open {
+  right: 0; /* Desliza para dentro da tela */
+}
+
+/* Botão de fechar */
+.close-button {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+/* Links do menu */
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.menu ul li {
+  margin: 15px 0;
+  background-color: #444; /* Fundo padrão dos itens */
+  border: 1px solid #555; /* Bordas para os retângulos */
+  border-radius: 5px; /* Bordas arredondadas */
+  overflow: hidden; /* Garante que o texto não saia do limite */
+}
+
+.menu ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 15px 20px; /* Espaçamento interno para criar os retângulos */
+  display: block; /* Garante que o link preencha todo o retângulo */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.menu ul li a:hover {
+  background-color: #555; /* Fundo mais escuro ao passar o mouse */
+  color: #bbb; /* Cor do texto ao passar o mouse */
+}
