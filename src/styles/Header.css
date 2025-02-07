@@ -13,6 +13,11 @@
   cursor: pointer;
   display: flex;
   align-items: center;
+  transition: transform 0.3s ease-in-out, opacity 0.3s;
+}
+
+.menu-button:hover {
+  transform: scale(1.4);
 }
 
 .menu-icon {
@@ -33,61 +38,92 @@
 .menu {
   position: fixed;
   top: 0;
-  right: -400%; /* Fora da tela inicialmente */
-  width: 85%; /* O menu ocupa 80% da largura da tela */
+  right: 0;
+  transform: translateX(100%); /* Fora da tela inicialmente */
+  width: 88%; /* O menu ocupa 85% da largura da tela */
   height: 100vh;
   background-color: #414141; /* Fundo escuro */
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
-  transition: 0.3s;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); /* Sombra invertida para o lado direito */
+  transition: transform 0.3s ease-in-out; /* Transição suave */
   z-index: 999;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 0; /* Remove o padding interno */
   color: #fff;
-  
+  font-family: 'Inria Sans', sans-serif;
 }
-
 
 /* Menu aberto */
 .menu.open {
-  right: 0; /* Desliza para dentro da tela */
+  transform: translateX(0); /* Faz o menu deslizar para dentro da tela */
 }
 
 /* Botão de fechar */
 .close-button {
   background: transparent;
   border: none;
-  color: #fff;
-  font-size: 24px;
-  align-self: flex-end;
+  color: #737373;
+  font-size: 64px;
+  align-self: flex-end; /* Alinha o botão à esquerda do menu */
+  margin-right: 30px; /* Ajusta a posição horizontal */
+  margin-top: 12px;
   cursor: pointer;
+  transition: transform 0.3s ease-in-out, opacity 0.3s;
 }
 
 /* Links do menu */
 .menu ul {
   list-style: none;
   padding: 0;
-  margin: 20px 0;
+  margin: 0;
 }
 
 .menu ul li {
   margin: 15px 0;
-  background-color: #444; /* Fundo padrão dos itens */
-  border: 1px solid #555; /* Bordas para os retângulos */
-  border-radius: 5px; /* Bordas arredondadas */
+  background-color: #3C3C3C; /* Fundo padrão dos itens */
+  border: 1px solid #2F2F2F; /* Bordas para os retângulos */
   overflow: hidden; /* Garante que o texto não saia do limite */
+  max-width: 1525px; /* Limita a largura do link */
 }
 
 .menu ul li a {
-  color: #fff;
+  color: #8D8D8D; /* Nova cor do texto */
   text-decoration: none;
-  font-size: 18px;
-  padding: 15px 20px; /* Espaçamento interno para criar os retângulos */
-  display: block; /* Garante que o link preencha todo o retângulo */
+  font-size: 38px;
+  font-weight: 400; /* Estilo regular */
+  padding: 30px 20px;
+  display: block;
   transition: background-color 0.3s, color 0.3s;
+  padding-left: 65px;
+}
+
+
+/* Colar o texto na borda esquerda do menu */
+.menu ul li a {
+  padding-left: 65px; /* Espaçamento para alinhar próximo à borda */
 }
 
 .menu ul li a:hover {
   background-color: #555; /* Fundo mais escuro ao passar o mouse */
   color: #bbb; /* Cor do texto ao passar o mouse */
+}
+
+/* Destaque para o item ativo */
+.menu ul li.active {
+  background-color: #2F2F2F; /* Fundo preto para o item ativo */
+}
+
+.menu ul li.active a {
+  color: #8D8D8D; /* Nova cor do texto */
+  font-weight: 400; /* Deixa o texto em negrito */
+  background-image: url('/public/icons/sete.png'); /* Caminho para a seta */
+  background-repeat: no-repeat; /* Não repetir a seta */
+  background-size: 20px 50px; /* Ajusta o tamanho da seta */
+  background-position: left center; /* Posição da seta (esquerda e centralizada) */
+  padding-left: 50px; /* Ajusta o espaçamento para o texto não sobrepor a seta */
+}
+
+/* Animação nos textos */
+.close-button:hover {
+  transform: scale(1.5);
 }

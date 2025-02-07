@@ -17,15 +17,15 @@ const Home = () => {
         </a>
       </aside>
       <main className="content">
-        <h1>Olá! Eu sou João Marcos.</h1>
-        <p>
+      <h1 className="home-text">Olá! Eu sou João Marcos.</h1>
+        <p className="home-text2">
           Tenho 20 anos, sou <strong>desenvolvedor front-end</strong>, engenheiro de
           <strong> JavaScript, HTML e CSS</strong>, e estudante de
           <strong> Ciência da Computação</strong>. Sempre busco novas formas de transformar
           tecnologia em experiências incríveis, explorando também o back-end e mergulhando no
           universo da Inteligência Artificial.
         </p>
-        <p>
+        <p className="home-text2">
           Esse é meu <strong>portfólio</strong>! Aqui você conhece meu trabalho e minha paixão
           por desenvolvimento! 💻🚀
         </p>

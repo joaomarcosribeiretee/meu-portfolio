@@ -1,5 +1,4 @@
-/* src/styles/Home.css */
-
+/* Estilos gerais */
 body {
   margin: 0;
   font-family: 'Pixelify Sans', sans-serif;
@@ -10,49 +9,70 @@ body {
 /* Centralizar o texto na tela */
 .home-container {
   display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center;    /* Centraliza verticalmente */
-  height: 100vh;          /* Define a altura como 100% da tela */
-  text-align: center;     /* Alinha o texto ao centro (se necessário) */
-  position: relative;     /* Permite posicionar os ícones dentro desse contêiner */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  position: relative;
 }
 
 .social-icons {
-  position: absolute; /* Posiciona os ícones fora do fluxo normal do layout */
-  left: 20px;         /* Fixa os ícones a 20px da borda esquerda */
-  top: 52%;           /* Centraliza os ícones verticalmente */
-  transform: translateY(-50%); /* Ajusta a posição para alinhar ao centro verticalmente */
-  display: flex;      /* Ativa o Flexbox */
-  flex-direction: column; /* Organiza os itens em uma coluna */
-  gap: 10px;          /* Adiciona espaço entre os ícones */
+  position: absolute;
+  left: 20px;
+  top: 52%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
+
 .social-icons a img {
   width: 55px;
   height: 55px;
   opacity: 1;
-  transition: opacity 0.3s;
+  transition: transform 0.3s ease-in-out, opacity 0.3s;
 }
 
 .social-icons a img:hover {
+  transform: scale(1.2);
   opacity: 1;
 }
 
 .content {
-  text-align: center; /* Centraliza o texto */
-  max-width: 1000px;   /* Aumenta a largura da área da descrição */
-  margin: 0 auto;     /* Centraliza horizontalmente */
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .content h1 {
-  font-size: 44px;    /* Deixa o título maior */
-  margin-bottom: 20px; /* Espaço entre título e descrição */
+  font-size: 44px;
+  margin-bottom: 20px;
   text-align: center;
 }
 
 .content p {
-  font-family: 'Inria Sans', sans-serif; /* Aplica a fonte Inria Sans */
-  font-size: 18px; /* Tamanho da fonte */
-  line-height: 1.5; /* Ajusta o espaçamento entre as linhas */
-  text-align: left; /* Alinha à esquerda */
+  font-family: 'Inria Sans', sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: left;
 }
 
+/* Animação nos textos */
+.home-text {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.home-text2 {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.home-text:hover {
+  transform: translateY(-5px) scale(1.15);
+  color: #CDC033;
+}
+
+.home-text2:hover {
+  transform:scale(1.05);
+}
