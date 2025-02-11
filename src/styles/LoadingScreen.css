@@ -1,0 +1,36 @@
+.loading-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #2B2B2B; /* Fundo escuro */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transição suave */
+  }
+  
+  .loading-screen.fade-out {
+    opacity: 0; /* Transição de opacidade */
+    transform: scale(0.90); /* Leve redução de escala */
+  }
+  
+  .circle {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: conic-gradient(
+      #6F6F6F var(--progress, 100%), /* Cinza na borda */
+      #000 var(--progress, 100%) /* Preto avança no sentido anti-horário */
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    z-index: 1; /* Coloca a foto acima */
+    background: #929292; /* Fundo branco */
+  }
+  

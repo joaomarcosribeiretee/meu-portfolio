@@ -1,0 +1,174 @@
+/* ======================== */
+/* Estilos Gerais da Página */
+/* ======================== */
+
+.about-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Garante que a tela ocupe 100% da altura sem scroll */
+    width: 100vw; /* Garante que ocupe toda a largura */
+    background-color: #2A2A2A; /* Fundo escuro */
+    color: #fff;
+    padding: 50px;
+    box-sizing: border-box; /* Evita que padding aumente o tamanho total */
+    overflow: hidden; /* Remove qualquer possível rolagem */
+}
+
+/* ========================= */
+/* Estrutura do Conteúdo */
+/* ========================= */
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px; /* Reduz o espaço entre a imagem e o texto */
+    max-width: 1400px;
+    width: 100%;
+}
+
+/* ========================= */
+/* Foto de Perfil */
+/* ========================= */
+
+.about-photo-container {
+    width: 450px; /* Ajusta o tamanho da foto */
+    height: auto; /* Mantém a proporção correta */
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.about-photo {
+    width: 100%;
+    height: auto; /* Mantém a proporção correta */
+    object-fit: contain; /* Ajusta a imagem sem cortar */
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efeito ao passar o mouse sobre a imagem */
+.about-photo:hover {
+    transform: scale(1.05);
+}
+
+/* ========================= */
+/* Texto "Sobre Mim" */
+/* ========================= */
+
+.about-text {
+    max-width: 900px; /* Diminui a largura do texto */
+    text-align: left;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.9rem; /* Diminui um pouco o tamanho do texto */
+    line-height: 1.4;
+    opacity: 0; /* Inicia invisível para animação */
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Animação do título "Sobre Mim" */
+.about-text h1 {
+    font-size: 2rem; /* Ajusta o tamanho do título */
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left;
+    opacity: 0; /* Começa invisível */
+    animation: fadeInSlide 1s ease-in-out forwards;
+}
+
+/* Parágrafos */
+.about-text p {
+    margin-bottom: 12px;
+    text-align: justify; /* Justifica o texto */
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Efeito ao passar o mouse no texto */
+.about-text p:hover {
+    transform: translateX(5px);
+    color: #f0a500; /* Cor dourada */
+}
+
+.about-text h1:hover {
+    transform: scale(1.2); /* Remove "px" */
+    transition: transform 0.3s ease-in-out; /* Adiciona uma transição suave */
+}
+
+/* Destaques no texto */
+.about-text strong {
+    color: #ffffff;
+}
+
+/* Texto em itálico */
+.about-text em {
+    font-style: italic;
+    color: #ddd;
+}
+
+/* ========================= */
+/* Animações */
+/* ========================= */
+
+/* Animação de Fade-in no Texto */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animação de Slide-in para o Título */
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ========================= */
+/* Responsividade */
+/* ========================= */
+
+@media (max-width: 1024px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-photo-container {
+        width: 350px;
+    }
+
+    .about-text {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-page {
+        padding: 30px;
+    }
+
+    .about-photo-container {
+        width: 300px;
+    }
+
+    .about-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .about-text {
+        font-size: 0.8rem;
+    }
+}

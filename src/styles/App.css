@@ -1,0 +1,29 @@
+.home-screen {
+    opacity: 0;
+    transition: opacity 0.7s ease; /* Transição suave para o fade-in */
+  }
+  
+  .home-screen.fade-in {
+    opacity: 1; /* Aparece gradualmente */
+  }
+  
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante altura total da tela */
+  }
+  
+  .content-container {
+    flex: 1; /* Faz com que o conteúdo cresça e empurre o Footer para baixo */
+  }
+  
+  .footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: #aaa;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
