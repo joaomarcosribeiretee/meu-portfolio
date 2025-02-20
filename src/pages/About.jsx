@@ -30,10 +30,10 @@ const About = () => {
             <div className="about-title-container">
               <h1>Sobre Mim</h1>
               <div className="about-icons">
-                <img src="/icons/flash.png" alt="Flash" className="about-icon flash-icon" />
                 <img src="/icons/spider.png" alt="Spider-Man" className="about-icon" />
                 <img src="/icons/95.png" alt="95" className="about-icon icon-95" />
-                <img src="/icons/thorfin.png" alt="Thorfinn" className="about-icon" />
+                <img src="/icons/thorfin.png" alt="Thorfinn" className="about-icon thorfinn-icon" />
+                <img src="/icons/flash.png" alt="Flash" className="about-icon flash-icon" />
               </div>
             </div>
             <p>
