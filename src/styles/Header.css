@@ -115,12 +115,13 @@
 
 .menu ul li.active a {
   color: #8D8D8D; /* Nova cor do texto */
+  font-size: 38px;
   font-weight: 400; /* Deixa o texto em negrito */
   background-image: url('/public/icons/sete.png'); /* Caminho para a seta */
   background-repeat: no-repeat; /* Não repetir a seta */
   background-size: 20px 50px; /* Ajusta o tamanho da seta */
   background-position: left center; /* Posição da seta (esquerda e centralizada) */
-  padding-left: 50px; /* Ajusta o espaçamento para o texto não sobrepor a seta */
+  padding-left: 65px; /* Ajusta o espaçamento para o texto não sobrepor a seta */
 }
 
 /* Animação nos textos */

@@ -1,16 +1,51 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 import Header from "./components/Header";
 import Home from "./pages/Home";
-import Footer from "./components/Footer";
+import About from "./pages/About";
+import LoadingScreen from "./components/LoadingScreen";
+import "./styles/App.css";
 
-function App() {
-    return (
-        <div>
-            <Header />
-            <Home />
-            <Footer />
+const AnimatedRoutes = () => {
+  const location = useLocation();
+
+  return (
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        {/* 🚀 Página inicial definida corretamente */}
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+
+        {/* 🚨 Redirecionamento caso a rota não exista */}
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
+    </AnimatePresence>
+  );
+};
+
+const App = () => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [fadeIn, setFadeIn] = useState(false);
+
+  useEffect(() => {
+    if (!isLoading) {
+      setTimeout(() => setFadeIn(true), 100);
+    }
+  }, [isLoading]);
+
+  return (
+    <Router>
+      {isLoading ? (
+        <LoadingScreen onLoadingComplete={() => setIsLoading(false)} />
+      ) : (
+        <div className={`app-container ${fadeIn ? "fade-in" : ""}`}>
+          <Header />
+          <AnimatedRoutes />
         </div>
-    );
-}
+      )}
+    </Router>
+  );
+};
 
 export default App;
