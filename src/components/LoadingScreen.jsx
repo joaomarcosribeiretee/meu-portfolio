@@ -11,7 +11,7 @@ const LoadingScreen = ({ onLoadingComplete }) => {
         if (prev >= 100) {
           clearInterval(interval);
           setIsFadingOut(true); // Inicia o fade-out
-          setTimeout(onLoadingComplete, 400); // Aguarda o fade-out antes de finalizar
+          setTimeout(onLoadingComplete, 100); // Aguarda o fade-out antes de finalizar
           return 100;
         }
         return prev + 1;

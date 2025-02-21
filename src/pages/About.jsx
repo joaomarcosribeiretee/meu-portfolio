@@ -3,6 +3,12 @@ import PageTransition from "../components/PageTransition";
 import "../styles/About.css";
 
 const About = () => {
+  // Função para tocar o áudio correspondente
+  const playSound = (soundFile) => {
+    const audio = new Audio(`/audio/${soundFile}`);
+    audio.play();
+  };
+
   return (
     <PageTransition>
       <div className="about-page">
@@ -30,34 +36,54 @@ const About = () => {
             <div className="about-title-container">
               <h1>Sobre Mim</h1>
               <div className="about-icons">
-                <img src="/icons/spider.png" alt="Spider-Man" className="about-icon" />
-                <img src="/icons/95.png" alt="95" className="about-icon icon-95" />
-                <img src="/icons/thorfin.png" alt="Thorfinn" className="about-icon thorfinn-icon" />
-                <img src="/icons/flash.png" alt="Flash" className="about-icon flash-icon" />
+                <img 
+                  src="/icons/spider.png" 
+                  alt="Spider-Man" 
+                  className="about-icon" 
+                  onClick={() => playSound("spider.mp3")} 
+                />
+                <img 
+                  src="/icons/95.png" 
+                  alt="95" 
+                  className="about-icon icon-95" 
+                  onClick={() => playSound("katchau.mp3")} 
+                />
+                <img 
+                  src="/icons/thorfin.png" 
+                  alt="Thorfinn" 
+                  className="about-icon thorfinn-icon" 
+                  onClick={() => playSound("thorfin.mp3")} 
+                />
+                <img 
+                  src="/icons/flash.png" 
+                  alt="Flash" 
+                  className="about-icon flash-icon" 
+                  onClick={() => playSound("flash.mp3")} 
+                />
               </div>
             </div>
             <p>
               Olá! Meu nome é <strong>João Marcos Ribeirete Garbelini</strong>, nascido em Curitiba, 
               mas cresci em Santo Antônio da Platina, uma cidade no Paraná. Desde criança, a tecnologia sempre foi parte da minha vida
-              – e tudo começou com os jogos. Foi no <strong>Minecraft </strong>
-              que dei meus primeiros passos na <strong>programação</strong>, criando mods e explorando a infinidade de possibilidades que um mundo virtual pode oferecer.
+              – e tudo começou com os jogos. Foi no <strong>Minecraft</strong> que dei meus primeiros passos na <strong>programação</strong>, 
+              criando mods e explorando a infinidade de possibilidades que um mundo virtual pode oferecer.
             </p>
             <p>
               Hoje, sou um <strong>desenvolvedor Front-End</strong> focado em transformar ideias em experiências digitais funcionais e atraentes. 
               Paralelamente, aprofundo meus conhecimentos no <strong>Back-End</strong> e estudo <strong>Inteligência Artificial</strong>,
               onde encontro grandes oportunidades de inovação. Sou apaixonado por <strong>design e edição</strong>, utilizando ferramentas como
-              <strong> Adobe Premiere, Vegas PRO, DaVinci, Photoshop</strong> e
-              <strong> Figma</strong> para criar vídeos e projetos de UI/UX. 
+              <strong> Adobe Premiere, Vegas PRO, DaVinci, Photoshop</strong> e <strong>Figma</strong> para criar vídeos e projetos de UI/UX. 
             </p>
             <p>
-              Minha jornada na tecnologia ganhou forma quando decidi cursar <strong>Ciência da Computação na PUC-SP. </strong>
+              Minha jornada na tecnologia ganhou forma quando decidi cursar <strong>Ciência da Computação na PUC-SP.</strong>
               A mudança para São Paulo foi um marco na minha vida — cheia de desafios, aprendizado e crescimento.
               Aqui, descobri que para criar algo grandioso, o <strong>trabalho em equipe e a comunicação</strong> são fundamentais.
             </p>
             <p>
-              Entre uma linha de código e outra, gosto de manter o equilíbrio praticando esportes como <strong>musculação e futebol.</strong> Mas meu lado nerd não fica de fora
-              – <strong>jogos, filmes de ficção e animações</strong> fazem parte do que me inspira a criar e a explorar novas ideias. 
-              A música também é uma grande companheira, dá uma olhada no meu perfil no  
+              Entre uma linha de código e outra, gosto de manter o equilíbrio praticando esportes como <strong>musculação e futebol.</strong> 
+              Mas meu lado nerd não fica de fora – <strong>jogos, filmes de ficção e animações</strong> fazem parte do que me inspira a criar e 
+              a explorar novas ideias. A música também é uma grande companheira, dá uma olhada no meu perfil no  
+              no  
               <span style={{ marginRight: "1px" }}> </span> {/* Adiciona espaçamento antes do link */}
               <a href="https://open.spotify.com/user/22lseke5ukek7jgd4sepaacoy?si=81add31631224262" 
                  target="_blank" 

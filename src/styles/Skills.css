@@ -1,0 +1,93 @@
+/* Configurações gerais da página de Skills */
+.skills-container {
+    text-align: center;
+    padding: 50px;
+    background-color: #1E1E1E;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Inria Serif", serif; /* Aplicando a fonte Inria Serif */
+    position: relative; /* Necessário para a decoração */
+    overflow: hidden; /* Evita qualquer tipo de scroll na página */
+}
+
+/* Título principal */
+.skills-title {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+/* Subtítulo */
+.skills-subtitle {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Descrição */
+.skills-description {
+    max-width: 800px;
+    font-size: 1rem;
+    margin: 20px auto;
+    line-height: 1.5;
+    font-weight: 300; /* Deixa a fonte mais leve */
+}
+
+.skills-description strong {
+    font-weight: bold; /* Mantém as partes destacadas fortes */
+}
+
+/* Link para o LinkedIn */
+.skills-linkedin {
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+.skills-linkedin a {
+    color: #FFD700; /* Amarelo ouro */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Ícones das tecnologias */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* Ajusta para duas linhas */
+    gap: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Estilo dos ícones */
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.skill-item:hover {
+    transform: scale(1.1);
+}
+
+.skill-icon {
+    width: 90px; /* Aumentei o tamanho dos ícones */
+    height: 90px;
+    margin-bottom: 10px;
+}
+
+/* Decoração no canto inferior esquerdo */
+.corner-decor {
+    position: fixed; /* Garante que fique colado na tela */
+    bottom: 0;
+    left: 0;
+    z-index: -1; /* Mantém no fundo sem atrapalhar o conteúdo */
+}
+
+.rectangles {
+    width: 120px; /* Ajustei um pouco o tamanho para ficar melhor ajustado */
+    height: auto;
+    opacity: 0.8;
+}

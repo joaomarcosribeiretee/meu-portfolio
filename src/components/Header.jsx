@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom"; // Importamos `useNavigate`
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "../styles/Header.css";
 
 const Header = () => {
-  const location = useLocation(); // Obtém a URL atual
-  const navigate = useNavigate(); // Controla a navegação manualmente
+  const location = useLocation();
+  const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeItem, setActiveItem] = useState("Página Inicial");
 
-  // Atualiza o estado `activeItem` conforme a URL muda
   useEffect(() => {
     switch (location.pathname) {
       case "/":
@@ -16,6 +15,9 @@ const Header = () => {
         break;
       case "/about":
         setActiveItem("Sobre Mim");
+        break;
+      case "/skills":
+        setActiveItem("Skills");
         break;
       default:
         setActiveItem("Página Inicial");
@@ -26,22 +28,10 @@ const Header = () => {
     setMenuOpen(!menuOpen);
   };
 
-  const handleMenuItemClick = (item) => {
+  const handleMenuItemClick = (item, path) => {
     setActiveItem(item);
-    setMenuOpen(false); // Fecha o menu após clicar em um item
-  };
-
-  // 📌 Função para garantir que vá para Home antes de ir para a seção interna
-  const handleSectionNavigation = (section) => {
-    if (location.pathname !== "/") {
-      navigate("/"); // Força a volta para a página inicial antes de navegar para a seção
-      setTimeout(() => {
-        document.getElementById(section)?.scrollIntoView({ behavior: "smooth" });
-      }, 100); // Pequeno delay para garantir que a navegação ocorra corretamente
-    } else {
-      document.getElementById(section)?.scrollIntoView({ behavior: "smooth" });
-    }
-    setMenuOpen(false); // Fecha o menu
+    setMenuOpen(false);
+    navigate(path);
   };
 
   return (
@@ -61,26 +51,34 @@ const Header = () => {
         <ul>
           {/* Página Inicial */}
           <li className={activeItem === "Página Inicial" ? "active" : ""}>
-            <Link to="/" onClick={() => handleMenuItemClick("Página Inicial")}>Página Inicial</Link>
+            <Link to="/" onClick={() => handleMenuItemClick("Página Inicial", "/")}>Página Inicial</Link>
           </li>
 
           {/* Sobre Mim */}
           <li className={activeItem === "Sobre Mim" ? "active" : ""}>
-            <Link to="/about" onClick={() => handleMenuItemClick("Sobre Mim")}>Sobre Mim</Link>
+            <Link to="/about" onClick={() => handleMenuItemClick("Sobre Mim", "/about")}>Sobre Mim</Link>
           </li>
 
-          {/* Seções dentro da Página Inicial */}
-          <li className={activeItem === "Habilidades" ? "active" : ""}>
-            <a href="#skills" onClick={() => handleSectionNavigation("skills")}>Habilidades</a>
+          {/* Skills */}
+          <li className={activeItem === "Skills" ? "active" : ""}>
+            <Link to="/skills" onClick={() => handleMenuItemClick("Skills", "/skills")}>Habilidades</Link>
           </li>
+
+          {/* 🔹 Seções dentro da Página Inicial */}
           <li className={activeItem === "Projetos" ? "active" : ""}>
-            <a href="#projects" onClick={() => handleSectionNavigation("projects")}>Projetos</a>
+            <a href="#projects" onClick={(e) => { e.preventDefault(); document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" }); }}>
+              Projetos
+            </a>
           </li>
           <li className={activeItem === "Experiência" ? "active" : ""}>
-            <a href="#experience" onClick={() => handleSectionNavigation("experience")}>Experiência</a>
+            <a href="#experience" onClick={(e) => { e.preventDefault(); document.getElementById("experience")?.scrollIntoView({ behavior: "smooth" }); }}>
+              Experiência
+            </a>
           </li>
           <li className={activeItem === "Contato" ? "active" : ""}>
-            <a href="#contact" onClick={() => handleSectionNavigation("contact")}>Contato</a>
+            <a href="#contact" onClick={(e) => { e.preventDefault(); document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" }); }}>
+              Contato
+            </a>
           </li>
         </ul>
       </nav>
