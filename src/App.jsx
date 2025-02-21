@@ -4,6 +4,7 @@ import { AnimatePresence } from "framer-motion";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Skills from "./pages/Skills";
 import LoadingScreen from "./components/LoadingScreen";
 import "./styles/App.css";
 
@@ -16,6 +17,7 @@ const AnimatedRoutes = () => {
         {/* 🚀 Página inicial definida corretamente */}
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/skills" element={<Skills />} />
 
         {/* 🚨 Redirecionamento caso a rota não exista */}
         <Route path="*" element={<Navigate to="/" />} />
