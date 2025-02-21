@@ -11,6 +11,20 @@ const Skills = () => {
 
   return (
     <PageTransition>
+        {/* Ícones Sociais */}
+        <aside className="social-icons">
+          <a href="https://www.instagram.com/joaomarcosribeirete/" target="_blank" rel="noopener noreferrer">
+            <img src="/icons/instagram.svg" alt="Instagram" />
+          </a>
+          <a href="https://github.com/joaomarcosribeiretee" target="_blank" rel="noopener noreferrer">
+            <img src="/icons/github.svg" alt="GitHub" />
+          </a>
+          <a href="https://www.linkedin.com/in/joaomarcosribeirete/" target="_blank" rel="noopener noreferrer">
+            <img src="/icons/linkedin.svg" alt="LinkedIn" />
+          </a>
+        </aside>
+
+
       <div className={`skills-container ${fadeIn ? "fade-in" : "fade-out"}`}>
         <div className="corner-decor">
           <img src="/icons/Retangulos.png" alt="Decoração" className="rectangles" />

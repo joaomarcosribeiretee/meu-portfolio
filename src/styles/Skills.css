@@ -51,14 +51,15 @@
     font-weight: bold;
 }
 
-/* Ícones das tecnologias */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(7, 1fr); /* Ajusta para duas linhas */
-    gap: 20px;
+    grid-template-columns: repeat(7, 1fr);
+    column-gap: 12px; /* Mantém o espaçamento lateral */
+    row-gap: 24px; /* Reduz a distância vertical entre as linhas */
     max-width: 900px;
     margin: auto;
 }
+
 
 /* Estilo dos ícones */
 .skill-item {
@@ -69,13 +70,13 @@
 }
 
 .skill-item:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); 
 }
 
 .skill-icon {
-    width: 90px; /* Aumentei o tamanho dos ícones */
-    height: 90px;
-    margin-bottom: 10px;
+    width: 120px; /* Aumentei o tamanho dos ícones */
+    height: 120px;
+    margin-bottom: 20px;
 }
 
 /* Decoração no canto inferior esquerdo */
