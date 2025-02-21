@@ -1,3 +1,11 @@
+/* Remove qualquer rolagem na tela */
+body {
+    overflow: hidden;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
 /* Configurações gerais da página de Skills */
 .skills-container {
     text-align: center;
@@ -9,9 +17,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-family: "Inria Serif", serif; /* Aplicando a fonte Inria Serif */
-    position: relative; /* Necessário para a decoração */
-    overflow: hidden; /* Evita qualquer tipo de scroll na página */
+    font-family: "Inria Serif", serif;
+    position: relative;
+    overflow: hidden;
 }
 
 /* Título principal */
@@ -30,36 +38,37 @@
 .skills-description {
     max-width: 800px;
     font-size: 1rem;
-    margin: 20px auto;
+    margin: 10px auto;
     line-height: 1.5;
-    font-weight: 300; /* Deixa a fonte mais leve */
+    font-weight: 300;
 }
 
 .skills-description strong {
-    font-weight: bold; /* Mantém as partes destacadas fortes */
+    font-weight: bold;
 }
 
 /* Link para o LinkedIn */
 .skills-linkedin {
     font-size: 1rem;
-    margin-bottom: 30px;
+    margin-bottom: 90px;
 }
 
 .skills-linkedin a {
-    color: #FFD700; /* Amarelo ouro */
+    color: #FFD700;
     text-decoration: none;
     font-weight: bold;
 }
 
+/* Grade de Tecnologias */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    column-gap: 12px; /* Mantém o espaçamento lateral */
-    row-gap: 24px; /* Reduz a distância vertical entre as linhas */
+    column-gap: 5px;
+    row-gap: 10px;
     max-width: 900px;
-    margin: auto;
+    margin-bottom: 140px;
+    justify-items: center;
 }
-
 
 /* Estilo dos ícones */
 .skill-item {
@@ -70,25 +79,51 @@
 }
 
 .skill-item:hover {
-    transform: scale(1.1); 
+    transform: scale(1.1);
 }
 
 .skill-icon {
-    width: 120px; /* Aumentei o tamanho dos ícones */
+    width: 120px;
     height: 120px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
-/* Decoração no canto inferior esquerdo */
+/* 🔹 Posicionamento do Retangulos.png no canto inferior esquerdo */
 .corner-decor {
-    position: fixed; /* Garante que fique colado na tela */
+    position: fixed; /* Fixa na tela */
     bottom: 0;
     left: 0;
     z-index: -1; /* Mantém no fundo sem atrapalhar o conteúdo */
 }
 
 .rectangles {
-    width: 120px; /* Ajustei um pouco o tamanho para ficar melhor ajustado */
+    width: 150px; /* Ajuste fino do tamanho */
+    margin-top: 100px;
     height: auto;
+    opacity: 0.8;
+    max-width: 100%;
+}
+
+/* Ícones das redes sociais */
+.social-icons {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+}
+
+.social-icons a img {
+    width: 55px;
+    height: 55px;
+    opacity: 1;
+    transition: transform 0.3s ease-in-out, opacity 0.3s;
+}
+
+.social-icons a img:hover {
+    transform: scale(1.2);
     opacity: 0.8;
 }

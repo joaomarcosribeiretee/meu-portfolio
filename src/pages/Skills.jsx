@@ -11,23 +11,22 @@ const Skills = () => {
 
   return (
     <PageTransition>
-        {/* Ícones Sociais */}
-        <aside className="social-icons">
-          <a href="https://www.instagram.com/joaomarcosribeirete/" target="_blank" rel="noopener noreferrer">
-            <img src="/icons/instagram.svg" alt="Instagram" />
-          </a>
-          <a href="https://github.com/joaomarcosribeiretee" target="_blank" rel="noopener noreferrer">
-            <img src="/icons/github.svg" alt="GitHub" />
-          </a>
-          <a href="https://www.linkedin.com/in/joaomarcosribeirete/" target="_blank" rel="noopener noreferrer">
-            <img src="/icons/linkedin.svg" alt="LinkedIn" />
-          </a>
-        </aside>
-
+      {/* Ícones Sociais */}
+      <aside className="social-icons">
+        <a href="https://www.instagram.com/joaomarcosribeirete/" target="_blank" rel="noopener noreferrer">
+          <img src="/icons/instagram.svg" alt="Instagram" className="social-icon" />
+        </a>
+        <a href="https://github.com/joaomarcosribeiretee" target="_blank" rel="noopener noreferrer">
+          <img src="/icons/github.svg" alt="GitHub" className="social-icon" />
+        </a>
+        <a href="https://www.linkedin.com/in/joaomarcosribeirete/" target="_blank" rel="noopener noreferrer">
+          <img src="/icons/linkedin.svg" alt="LinkedIn" className="social-icon" />
+        </a>
+      </aside>
 
       <div className={`skills-container ${fadeIn ? "fade-in" : "fade-out"}`}>
-        <div className="corner-decor">
-          <img src="/icons/Retangulos.png" alt="Decoração" className="rectangles" />
+        <div className="corner-decor" style={{ position: "fixed", bottom: "0", left: "0", zIndex: "-1" }}>
+          <img src="/icons/Retangulos.png" alt="Decoração" className="rectangles" onError={(e) => e.target.style.display='none'} />
         </div>
         <h1 className="skills-title">TECNOLOGIAS</h1>
         <p className="skills-subtitle">
@@ -44,24 +43,23 @@ const Skills = () => {
         {/* 🔹 Grade de Ícones das Tecnologias */}
         <div className="skills-grid">
           {[
-            { src: "/icons/tec/html.svg"},
-            { src: "/icons/tec/css.svg"},
-            { src: "/icons/tec/javascript.svg"},
-            { src: "/icons/tec/vue.svg"},
-            { src: "/icons/tec/node.svg"},
-            { src: "/icons/tec/react.svg"},
-            { src: "/icons/tec/fgima.svg"},
-            { src: "/icons/tec/python.svg"},
-            { src: "/icons/tec/mysql.svg"},
-            { src: "/icons/tec/vs.svg"},
-            { src: "/icons/tec/git.svg"},
-            { src: "/icons/tec/vegas.svg"},
-            { src: "/icons/tec/photoshop.svg"},
-            { src: "/icons/tec/premiere.svg"},
+            { src: "/icons/tec/html.svg" },
+            { src: "/icons/tec/css.svg" },
+            { src: "/icons/tec/javascript.svg" },
+            { src: "/icons/tec/vue.svg" },
+            { src: "/icons/tec/node.svg" },
+            { src: "/icons/tec/react.svg" },
+            { src: "/icons/tec/fgima.svg" },
+            { src: "/icons/tec/python.svg" },
+            { src: "/icons/tec/mysql.svg" },
+            { src: "/icons/tec/vs.svg" },
+            { src: "/icons/tec/git.svg" },
+            { src: "/icons/tec/vegas.svg" },
+            { src: "/icons/tec/photoshop.svg" },
+            { src: "/icons/tec/premiere.svg" },
           ].map((tech, index) => (
             <div key={index} className="skill-item">
-              <img src={tech.src} alt={tech.name} className="skill-icon" />
-              <p>{tech.name}</p>
+              <img src={tech.src} alt="Tecnologia" className="skill-icon" />
             </div>
           ))}
         </div>
