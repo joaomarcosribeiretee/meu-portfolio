@@ -1,16 +1,21 @@
+<<<<<<< HEAD
 /* Remove qualquer rolagem na tela */
 body {
 
     height: 100vh;
     margin: 0;
     padding: 0;
+=======
+body {
+    overflow: hidden;
+>>>>>>> 879d7004e75f36cc65fe72132542458152a97a41
 }
 
 /* Configurações gerais da página de Skills */
 .skills-container {
     text-align: center;
     padding: 50px;
-    background-color: #1E1E1E;
+    background-color: #2A2A2A;
     color: white;
     min-height: 100vh;
     display: flex;
@@ -24,7 +29,7 @@ body {
 
 /* Título principal */
 .skills-title {
-    font-size: 3rem;
+    font-size: 6rem;
     font-weight: bold;
 }
 
@@ -112,6 +117,7 @@ body {
     opacity: 0.8;
 }
 
+<<<<<<< HEAD
 .corner-decor {
     position: fixed;
     bottom: 20px; /* Aumenta para mover para cima */
@@ -123,4 +129,43 @@ body {
     width: 150px;
     height: auto;
     opacity: 1;
+=======
+
+.social-icons {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000; /* Garante que fique na frente */
+}
+
+.social-icons a img {
+    width: 55px;
+    height: 55px;
+    opacity: 1; /* Garante que não está transparente */
+    transition: transform 0.3s ease-in-out, opacity 0.3s;
+}
+
+.social-icons a img:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+.corner-decor {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 10; /* Aumentei para garantir visibilidade */
+}
+
+.rectangles {
+    margin-bottom: 50px;
+    width: 200px;
+    height: auto;
+    opacity: 1; /* Garante que não está invisível */
+    max-width: 100%;
+>>>>>>> 879d7004e75f36cc65fe72132542458152a97a41
 }
