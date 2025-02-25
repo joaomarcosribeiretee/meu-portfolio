@@ -1,6 +1,6 @@
 /* Remove qualquer rolagem na tela */
 body {
-    overflow: hidden;
+
     height: 100vh;
     margin: 0;
     padding: 0;
@@ -88,22 +88,6 @@ body {
     margin-bottom: 5px;
 }
 
-/* 🔹 Posicionamento do Retangulos.png no canto inferior esquerdo */
-.corner-decor {
-    position: fixed; /* Fixa na tela */
-    bottom: 0;
-    left: 0;
-    z-index: -1; /* Mantém no fundo sem atrapalhar o conteúdo */
-}
-
-.rectangles {
-    width: 150px; /* Ajuste fino do tamanho */
-    margin-top: 100px;
-    height: auto;
-    opacity: 0.8;
-    max-width: 100%;
-}
-
 /* Ícones das redes sociais */
 .social-icons {
     position: fixed;
@@ -126,4 +110,17 @@ body {
 .social-icons a img:hover {
     transform: scale(1.2);
     opacity: 0.8;
+}
+
+.corner-decor {
+    position: fixed;
+    bottom: 20px; /* Aumenta para mover para cima */
+    left: 0;
+    z-index: 10;
+}
+
+.rectangles {
+    width: 150px;
+    height: auto;
+    opacity: 1;
 }
