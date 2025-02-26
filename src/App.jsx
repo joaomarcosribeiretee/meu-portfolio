@@ -7,6 +7,7 @@ import About from "./pages/About";
 import Skills from "./pages/Skills";
 import LoadingScreen from "./components/LoadingScreen";
 import "./styles/App.css";
+import Projects from "./pages/Projects";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -18,6 +19,7 @@ const AnimatedRoutes = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/skills" element={<Skills />} />
+        <Route path="/projects" element={<Projects />} />
 
         {/* 🚨 Redirecionamento caso a rota não exista */}
         <Route path="*" element={<Navigate to="/" />} />

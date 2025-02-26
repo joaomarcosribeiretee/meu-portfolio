@@ -1,61 +1,55 @@
-<<<<<<< HEAD
-/* Remove qualquer rolagem na tela */
-body {
-
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-=======
 body {
     overflow: hidden;
->>>>>>> 879d7004e75f36cc65fe72132542458152a97a41
 }
 
-/* Configurações gerais da página de Skills */
 .skills-container {
-    text-align: center;
-    padding: 50px;
-    background-color: #2A2A2A;
-    color: white;
-    min-height: 100vh;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: center; /* Centraliza o conteúdo, como no Home */
+    height: 100vh; /* Mantém o tamanho igual às outras páginas */
+    background-color: #2A2A2A;
+    color: white;
     font-family: "Inria Serif", serif;
-    position: relative;
-    overflow: hidden;
 }
 
 /* Título principal */
 .skills-title {
-    font-size: 6rem;
+    font-family: "Inria Serif", serif;
     font-weight: bold;
+    font-size: 112px;
+    letter-spacing: 0%;
+    margin-bottom: 10px;
+    margin-top: -30px; /* Reduz o espaço acima do título */
 }
 
 /* Subtítulo */
 .skills-subtitle {
     font-size: 1.2rem;
-    margin-top: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-weight: 400;
 }
 
 /* Descrição */
 .skills-description {
-    max-width: 800px;
-    font-size: 1rem;
+    max-width: 1200px;
+    font-size: 1.2rem;
     margin: 10px auto;
-    line-height: 1.5;
-    font-weight: 300;
+    line-height: 1.4;
+    font-weight: lighter;
 }
 
 .skills-description strong {
     font-weight: bold;
+    color: white;
 }
 
 /* Link para o LinkedIn */
 .skills-linkedin {
-    font-size: 1rem;
-    margin-bottom: 90px;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
 }
 
 .skills-linkedin a {
@@ -64,15 +58,15 @@ body {
     font-weight: bold;
 }
 
-/* Grade de Tecnologias */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    column-gap: 5px;
-    row-gap: 10px;
+    column-gap: 21px;
+    row-gap: 12px;
     max-width: 900px;
-    margin-bottom: 140px;
-    justify-items: center;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Estilo dos ícones */
@@ -88,84 +82,123 @@ body {
 }
 
 .skill-icon {
-    width: 120px;
-    height: 120px;
-    margin-bottom: 5px;
+    width: 130px;
+    height: 130px;
+    margin-bottom: 35px;
 }
 
-/* Ícones das redes sociais */
+/* Ícones sociais ajustados */
+/* Ícones sociais ajustados */
 .social-icons {
-    position: fixed;
-    left: 20px;
+    position: absolute;
+    left: 20px; /* Mantém os ícones alinhados à esquerda */
     top: 50%;
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    z-index: 1000;
+    gap: 10px;
+    z-index: 10; /* Mantém acima do conteúdo */
 }
 
-.social-icons a img {
+.skills-container {
+    position: relative; /* Garante que os ícones sociais sejam posicionados em relação a este container */
+}
+
+  
+  .social-icons a img {
     width: 55px;
     height: 55px;
     opacity: 1;
     transition: transform 0.3s ease-in-out, opacity 0.3s;
-}
-
-.social-icons a img:hover {
+  }
+  
+  .social-icons a img:hover {
     transform: scale(1.2);
-    opacity: 0.8;
-}
-
-<<<<<<< HEAD
-.corner-decor {
-    position: fixed;
-    bottom: 20px; /* Aumenta para mover para cima */
-    left: 0;
-    z-index: 10;
-}
-
-.rectangles {
-    width: 150px;
-    height: auto;
     opacity: 1;
-=======
+  }
+  
 
-.social-icons {
-    position: fixed;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
+
+/* Animação do sublinhado no LinkedIn */
+.linkedin-link {
+    position: relative;
+    display: inline-block;
+    color: #FFD700;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out, color 0.3s;
+}
+
+.linkedin-link::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #FFD700;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.linkedin-link:hover::after {
+    transform: scaleX(1);
+}
+
+.linkedin-link:hover {
+    color: #ffeb75;
+    transform: scale(1.1);
+}
+
+@keyframes linkedinGlow {
+    from {
+        text-shadow: 0 0 5px #FFD700;
+    }
+    to {
+        text-shadow: 0 0 10px #FFD700;
+    }
+}
+
+.linkedin-link {
+    animation: linkedinGlow 1.5s infinite alternate ease-in-out;
+}
+
+/* Wrapper para centralizar todo o conteúdo sem afetar os ícones sociais */
+.content-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    z-index: 1000; /* Garante que fique na frente */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
 }
 
-.social-icons a img {
-    width: 55px;
-    height: 55px;
-    opacity: 1; /* Garante que não está transparente */
-    transition: transform 0.3s ease-in-out, opacity 0.3s;
-}
-
-.social-icons a img:hover {
-    transform: scale(1.2);
-    opacity: 0.8;
-}
-
+/* Retângulos no canto inferior esquerdo */
 .corner-decor {
     position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 10; /* Aumentei para garantir visibilidade */
+    bottom: 20px;
+    left: 20px;
+    z-index: 900;
 }
 
-.rectangles {
-    margin-bottom: 50px;
+.corner-decor img {
     width: 200px;
     height: auto;
-    opacity: 1; /* Garante que não está invisível */
-    max-width: 100%;
->>>>>>> 879d7004e75f36cc65fe72132542458152a97a41
+    opacity: 0.8;
+}
+
+/* Retângulos no canto inferior esquerdo */
+.corner-decor {
+    position: fixed;
+    bottom: 50px;
+    left: 0px;
+    z-index: 900;
+}
+
+.corner-decor img {
+    width: 230px;
+    height: auto;
+    opacity: 0.8;
 }
