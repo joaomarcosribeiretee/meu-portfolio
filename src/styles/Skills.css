@@ -1,3 +1,6 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300;400;700&display=swap");
+
 body {
     overflow: hidden;
 }
@@ -21,7 +24,7 @@ body {
     font-size: 112px;
     letter-spacing: 0%;
     margin-bottom: 10px;
-    margin-top: -30px; /* Reduz o espaço acima do título */
+
 }
 
 /* Subtítulo */
@@ -34,7 +37,7 @@ body {
 
 /* Descrição */
 .skills-description {
-    max-width: 1200px;
+    max-width: 1400px;
     font-size: 1.2rem;
     margin: 10px auto;
     line-height: 1.4;

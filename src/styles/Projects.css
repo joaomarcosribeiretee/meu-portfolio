@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300;400;700&display=swap");
+
+.projects-container {
+    font-family: "Inria Serif", serif;
+}
+
+
 /* Configurações gerais da página de Projetos */
 .projects-container {
     position: relative;
@@ -10,34 +17,35 @@
     color: white;
     font-family: "Inria Serif", serif;
     text-align: center;
-    padding: 30px;
 }
 
 /* Wrapper para centralizar o conteúdo */
 .content-wrapper {
-    max-width: 1000px;
+    max-width: 1100px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: -70px;
 }
 
 /* Título principal */
 .projects-title {
     font-family: "Inria Serif", serif;
-    font-weight: bold;
-    font-size: 64px;
+    font-weight: 700; /* Experimente 800 ou 900 também */
+    font-size: 78px;
     letter-spacing: 0%;
-    margin-bottom: 15px;
+    margin-bottom: 25px
 }
 
 /* Descrição */
 .projects-description {
-    max-width: 900px;
-    font-size: 1.2rem;
+    max-width: 800px;
+    font-size: 1.18rem;
     line-height: 1.4;
     font-weight: lighter;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
+    margin-top: 2px;
 }
 
 /* Destacar palavras-chave */
@@ -49,7 +57,7 @@
 /* Botão de visualizar projetos */
 .projects-link {
     font-size: 1.2rem;
-    color: #0066ff;
+    color: #2D1BD6;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease-in-out;
@@ -92,4 +100,18 @@
 .fade-out {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
+}
+
+/* Retângulos no canto inferior esquerdo */
+.corner-decor {
+    position: fixed;
+    bottom: 850px;
+    left: 0px;
+    z-index: 900;
+}
+
+.corner-decor img {
+    width: 210px;
+    height: auto;
+    opacity: 0.8;
 }

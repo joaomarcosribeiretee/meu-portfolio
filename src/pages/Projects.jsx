@@ -30,9 +30,19 @@ const Projects = () => {
           Aqui estão alguns dos projetos que desenvolvi, cada um focado em atender demandas específicas com soluções criativas.
           Se precisar de algo exclusivo ou quiser discutir sua ideia, entre em <span className="highlight">contato</span> comigo!
         </p>
-        <Link to="/projects" className="projects-link">Ver Projetos &gt;</Link>
+        <a href="https://github.com/joaomarcosribeiretee" 
+          className="projects-link" 
+          target="_blank" 
+          rel="noopener noreferrer">
+          Ver Projetos &gt;
+          </a>
+
+      </div>
+      <div className="corner-decor">
+        <img src="/icons/Retangulos.png" alt="Decoração" />
       </div>
     </div>
+  
   );
 };
 
