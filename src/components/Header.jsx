@@ -19,6 +19,9 @@ const Header = () => {
       case "/skills":
         setActiveItem("Skills");
         break;
+      case "/projects":
+        setActiveItem("Projetos");
+        break;
       default:
         setActiveItem("Página Inicial");
     }
@@ -64,12 +67,11 @@ const Header = () => {
             <Link to="/skills" onClick={() => handleMenuItemClick("Skills", "/skills")}>Habilidades</Link>
           </li>
 
-          {/* 🔹 Seções dentro da Página Inicial */}
+          {/* Projetos */}
           <li className={activeItem === "Projetos" ? "active" : ""}>
-            <a href="#projects" onClick={(e) => { e.preventDefault(); document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" }); }}>
-              Projetos
-            </a>
+            <Link to="/projects" onClick={() => handleMenuItemClick("Projetos", "/projects")}>Projetos</Link>
           </li>
+
           <li className={activeItem === "Experiência" ? "active" : ""}>
             <a href="#experience" onClick={(e) => { e.preventDefault(); document.getElementById("experience")?.scrollIntoView({ behavior: "smooth" }); }}>
               Experiência

@@ -1,0 +1,95 @@
+/* Configurações gerais da página de Projetos */
+.projects-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centraliza o conteúdo */
+    height: 100vh;
+    background-color: #2A2A2A;
+    color: white;
+    font-family: "Inria Serif", serif;
+    text-align: center;
+    padding: 30px;
+}
+
+/* Wrapper para centralizar o conteúdo */
+.content-wrapper {
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Título principal */
+.projects-title {
+    font-family: "Inria Serif", serif;
+    font-weight: bold;
+    font-size: 64px;
+    letter-spacing: 0%;
+    margin-bottom: 15px;
+}
+
+/* Descrição */
+.projects-description {
+    max-width: 900px;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    font-weight: lighter;
+    margin-bottom: 20px;
+}
+
+/* Destacar palavras-chave */
+.projects-description .highlight {
+    font-weight: bold;
+    color: #FFD700;
+}
+
+/* Botão de visualizar projetos */
+.projects-link {
+    font-size: 1.2rem;
+    color: #0066ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.projects-link:hover {
+    color: #ffeb75;
+}
+
+/* Ícones sociais */
+.social-icons {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 10;
+}
+
+.social-icons a img {
+    width: 55px;
+    height: 55px;
+    opacity: 1;
+    transition: transform 0.3s ease-in-out, opacity 0.3s;
+}
+
+.social-icons a img:hover {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+/* Animação de fade-in para transição */
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
