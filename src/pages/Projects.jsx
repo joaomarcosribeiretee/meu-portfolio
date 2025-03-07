@@ -1,4 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 import "../styles/Header.css";
 import "../styles/Projects.css";
 
@@ -21,21 +25,10 @@ const projectsData = [
 
 const Projects = () => {
   const [fadeIn, setFadeIn] = useState(false);
-  const [currentIndex, setCurrentIndex] = useState(-1); // Inicialmente, tela padrão sem projetos
 
   useEffect(() => {
     setTimeout(() => setFadeIn(true), 50);
   }, []);
-
-  const nextProject = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % projectsData.length);
-  };
-
-  const prevProject = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === -1 ? projectsData.length - 1 : prevIndex - 1
-    );
-  };
 
   return (
     <div className={`projects-container ${fadeIn ? "fade-in" : "fade-out"}`}>
@@ -51,14 +44,19 @@ const Projects = () => {
         </a>
       </aside>
       
-      <div className="corner-decor">
+      <div className="corner-decor2">
         <img src="/icons/Retangulos.png" alt="Decoração" />
       </div>
       
-      <div className="content-wrapper">
-        {currentIndex === -1 ? (
-          // Tela inicial padrão
-          <>
+      <Swiper
+        modules={[Pagination]}
+        pagination={{ clickable: true }}
+        spaceBetween={50}
+        slidesPerView={1}
+        className="projects-swiper"
+      >
+        <SwiperSlide>
+          <div className="content-wrapper">
             <h1 className="projects-title">PORTFOLIO & PROJETOS</h1>
             <p className="projects-description">
               Aqui estão alguns dos projetos que desenvolvi, cada um focado em atender demandas específicas com soluções criativas.
@@ -67,23 +65,21 @@ const Projects = () => {
             <a href="https://github.com/joaomarcosribeiretee" className="projects-link" target="_blank" rel="noopener noreferrer">
               Ver Projetos &gt;
             </a>
-          </>
-        ) : (
-          // Exibição dos projetos
-          <div className="slide fade-transition">
-            <h3 className="project-subtitle">{projectsData[currentIndex].subtitle}</h3>
-            <h2 className="project-title">{projectsData[currentIndex].title}</h2>
-            <p className="project-description">{projectsData[currentIndex].description}</p>
-            <a href={projectsData[currentIndex].link} target="_blank" rel="noopener noreferrer" className="projects-link">Acessar o App &gt;</a>
-            <img src={projectsData[currentIndex].image} alt={projectsData[currentIndex].title} className="project-image" />
           </div>
-        )}
-      </div>
-      
-      <div className="slider-nav">
-        <button className="nav-button left" onClick={prevProject}>&lt;</button>
-        <button className="nav-button right" onClick={nextProject}>&gt;</button>
-      </div>
+        </SwiperSlide>
+
+        {projectsData.map((project, index) => (
+          <SwiperSlide key={index}>
+            <div className="content-wrapper">
+              <h3 className="project-subtitle">{project.subtitle}</h3>
+              <h2 className="project-title">{project.title}</h2>
+              <p className="project-description">{project.description}</p>
+              <a href={project.link} target="_blank" rel="noopener noreferrer" className="projects-link">Acessar o App &gt;</a>
+              <img src={project.image} alt={project.title} className="project-image" />
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
 };
