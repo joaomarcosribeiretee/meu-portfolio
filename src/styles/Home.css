@@ -77,3 +77,25 @@ body {
 .home-text2:hover {
   transform:scale(1.05);
 }
+
+.wave-container {
+  position: absolute;
+  bottom: -10px; /* Reduzindo a posição inicial para descer um pouco */
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.wave-svg {
+  width: 100%;
+  opacity: 30%;
+  height: auto;
+  animation: waveMove 5s infinite ease-in-out;
+}
+
+/* Animação suave de subir e descer */
+@keyframes waveMove {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(15px); } /* Sobe um pouco */
+  100% { transform: translateY(0px); } /* Volta para a posição inicial */
+}
