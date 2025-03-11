@@ -8,19 +8,29 @@ import "../styles/Projects.css";
 
 const projectsData = [
   {
-    title: "MarketPlace",
-    subtitle: "APLICAÇÃO WEB",
-    description:
-      "Marketplace online para compra e venda de produtos tecnológicos. Desenvolvido com HTML, CSS, JavaScript, Express, MySQL, integração com bcrypt para hashing de senhas e funcionalidades como modo noturno, usuários logados, inserção de produtos e carrinho de compras.",
-    link: "https://github.com/joaomarcosribeiretee/projeto1",
-    media: { type: "image", src: "/images/project1.png" },
-  },
-  {
     title: "LIGAMASTER",
     subtitle: "APLICAÇÃO WEB",
     description:
       "Aplicativo para criação e gestão de campeonatos esportivos, permitindo organizar times, partidas e tabelas de desempenho de forma prática e eficiente.<br /><br />" +
       "<strong>Desenvolvido com:</strong> HTML, CSS, JavaScript, Express e MySQL, proporcionando funcionalidades como cadastro de campeonatos, gerenciamento de times e jogadores, geração automática de partidas e acompanhamento de desempenho em tempo real.",
+    link: "https://github.com/joaomarcosribeiretee/projeto2",
+    media: { type: "video", src: "/videos/ligamaster.mp4" },
+  },
+  {
+    title: "MARKETPLACE",
+    subtitle: "APLICAÇÃO WEB",
+    description:
+      "Marketplace online para compra e venda de produtos tecnológicos.<br /><br />" +
+      "<strong>Desenvolvido com:</strong> HTML, CSS, JavaScript, Express, MySQL, integração com bcrypt para hashing de senhas e funcionalidades como registro de usuários, login, cadastro de produtos e carrinho de compras.",
+    link: "https://github.com/joaomarcosribeiretee/projeto2",
+    media: { type: "video", src: "/videos/ligamaster.mp4" },
+  },
+  {
+    title: "FLASHCARDS",
+    subtitle: "APLICAÇÃO MOBILE E DESKTOP",
+    description:
+      "Aplicativo para criação, organização e estudo de flashcards personalizados.<br /><br />" +
+      "<strong>Desenvolvido com:</strong> HTML, CSS, JavaScript e Electron para a versão desktop, e React Native para a versão mobile, garantindo uma experiência fluida em múltiplas plataformas.",
     link: "https://github.com/joaomarcosribeiretee/projeto2",
     media: { type: "video", src: "/videos/ligamaster.mp4" },
   },
@@ -70,24 +80,22 @@ const Projects = () => {
         slidesPerView={1}
         className="projects-swiper"
       >
-        <SwiperSlide>
+        <SwiperSlide className="first-slide">
           <div className="content-wrapper">
             <h1 className="projects-title">PORTFOLIO & PROJETOS</h1>
             <p className="projects-description">
-              Aqui estão alguns dos projetos que desenvolvi, cada um focado em atender demandas
-              específicas com soluções criativas. Se precisar de algo exclusivo ou quiser discutir
-              sua ideia, entre em <span className="highlight">contato</span> comigo!
+              Aqui estão alguns dos projetos que desenvolvi, cada um focado em atender demandas específicas com soluções criativas.
+              Se precisar de algo exclusivo ou quiser discutir sua ideia, entre em <span className="highlight">contato</span> comigo!
             </p>
-            <a
-              href="https://github.com/joaomarcosribeiretee"
+            <a href="https://github.com/joaomarcosribeiretee"
               className="projects-link"
               target="_blank"
-              rel="noopener noreferrer"
-            >
+              rel="noopener noreferrer">
               Ver Projetos &gt;
             </a>
           </div>
         </SwiperSlide>
+
 
         {projectsData.map((project, index) => (
           <SwiperSlide key={index}>

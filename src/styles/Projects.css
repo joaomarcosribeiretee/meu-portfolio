@@ -68,6 +68,15 @@
     gap: 10px;
 }
 
+/* Ajuste específico para o primeiro slide */
+.first-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
 /* Texto do projeto */
 .project-text {
     flex: 1;
@@ -89,6 +98,7 @@
     font-weight: 700;
     margin-bottom: 5px;
     margin-top: -5px;
+    
 }
 
 .project-description {
@@ -151,4 +161,43 @@
 /* Ajuste para evitar bug visual no Swiper */
 .swiper {
     overflow: hidden;
+}
+
+
+/* Título principal */
+.projects-title {
+    font-family: "Inria Serif", serif;
+    font-weight: 700; /* Experimente 800 ou 900 também */
+    font-size: 78px;
+    letter-spacing: 0%;
+    margin-bottom: 25px
+}
+
+/* Descrição */
+.projects-description {
+    max-width: 800px;
+    font-size: 1.18rem;
+    line-height: 1.4;
+    font-weight: lighter;
+    margin-bottom: 35px;
+    margin-top: 2px;
+}
+
+/* Destacar palavras-chave */
+.projects-description .highlight {
+    font-weight: bold;
+    color: #FFD700;
+}
+
+/* Botão de visualizar projetos */
+.projects-link {
+    font-size: 1.2rem;
+    color: #2D1BD6;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.projects-link:hover {
+    color: #ffeb75;
 }
