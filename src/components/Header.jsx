@@ -24,7 +24,10 @@ const Header = () => {
         break;
         case "/experience":
           setActiveItem("Experiência");
-          break;
+        break;
+        case "/contact":
+          setActiveItem("Contato");
+        break;
       
       default:
         setActiveItem("Página Inicial");
@@ -76,16 +79,17 @@ const Header = () => {
             <Link to="/projects" onClick={() => handleMenuItemClick("Projetos", "/projects")}>Projetos</Link>
           </li>
 
-         {/* Projetos */}
+         {/* Experiencia */}
           <li className={activeItem === "Experiência" ? "active" : ""}>
             <Link to="/experience" onClick={() => handleMenuItemClick("Experiência", "/experience")}>Experiência</Link>
           </li>
 
-          <li className={activeItem === "Contato" ? "active" : ""}>
-            <a href="#contact" onClick={(e) => { e.preventDefault(); document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" }); }}>
-              Contato
-            </a>
+         {/* Contato */}
+         <li className={activeItem === "Contato" ? "active" : ""}>
+            <Link to="/contact" onClick={() => handleMenuItemClick("Contato", "/contact")}>Contato</Link>
           </li>
+
+
         </ul>
       </nav>
     </header>

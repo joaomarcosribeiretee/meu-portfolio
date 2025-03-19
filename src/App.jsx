@@ -9,6 +9,7 @@ import LoadingScreen from "./components/LoadingScreen";
 import "./styles/App.css";
 import Projects from "./pages/Projects";
 import Experience from "./pages/Experience"
+import Contact from "./pages/Contact";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -22,6 +23,7 @@ const AnimatedRoutes = () => {
         <Route path="/skills" element={<Skills />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/experience" element={<Experience />} />
+        <Route path="/contact" element={<Contact />} />
 
         {/* 🚨 Redirecionamento caso a rota não exista */}
         <Route path="*" element={<Navigate to="/" />} />
