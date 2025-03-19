@@ -40,14 +40,21 @@
 
 /* Descrição */
 .projects-description {
-    max-width: 1000px;
-    font-size: 1.35rem;
+    font-family: 'Inria Sans', sans-serif; /* Aplica a nova fonte */
+    max-width: 1400px;
+    font-size: 1.1rem;
     line-height: 1.6;
     font-weight: lighter;
     margin-bottom: 30px;
     margin-top: 5px;
     text-align: center; /* Mantém a centralização */
 }
+
+.project-description strong {
+    font-weight:900; /* Garante o negrito */
+    color: #FFD700; /* Opcional: cor diferente para destacar */
+}
+
 
 /* Swiper - Container dos Slides */
 .projects-swiper {
@@ -201,3 +208,26 @@
 .projects-link:hover {
     color: #ffeb75;
 }
+
+.wave-container2 {
+    position: absolute;
+    bottom: -10px; /* Reduzindo a posição inicial para descer um pouco */
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .wave-svg2 {
+    width: 100%;
+    opacity: 30%;
+    height: auto;
+    animation: waveMove 5s infinite ease-in-out;
+  }
+  
+  /* Animação suave de subir e descer */
+  @keyframes waveMove {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(15px); } /* Sobe um pouco */
+    100% { transform: translateY(0px); } /* Volta para a posição inicial */
+  }
+  

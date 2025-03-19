@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300;400;700&family=Inria+Sans:wght@300;400;700&display=swap");
+
+.contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Move para a esquerda */
+    height: 100vh;
+    background-color: #2A2A2A;
+    color: white;
+    font-family: "Inria Serif", serif;
+    padding-left: 8%;
+    padding-top: -20px; /* Move os elementos um pouco para cima */
+}
+
+/* Estilização do formulário */
+.contact-form {
+    max-width: 700px;
+    width: 100%;
+    text-align: left; /* Alinhar todo o texto para a esquerda */
+    margin-left: 10%;
+    margin-bottom: 100px;
+}
+
+.contact-title {
+    font-size: 90px;
+    font-weight: bold;
+    margin-bottom: 1px;
+}
+
+.contact-description {
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+.contact-description a {
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.contact-description a:hover {
+    text-decoration: underline;
+}
+
+/* Campos do formulário */
+input,
+textarea {
+    width: 95%;
+    padding: 16px;
+    margin-bottom: 25px;
+    border: 1.5px solid #737373;
+    background: #2A2A2A;
+    color: white;
+    font-size: 17px;
+    border-radius: 10px;
+    font-family: 'Inria Sans', sans-serif; /* Aplica a nova fonte */
+}
+
+textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* Botões lado a lado */
+.form-buttons {
+    display: flex;
+    justify-content: space-between; /* Distribui os botões uniformemente */
+    gap: 90px; /* Ajuste o espaçamento entre os botões */
+    margin-top: 10px; /* Adiciona um pequeno espaço acima dos botões */
+}
+
+.submit-btn,
+.download-btn {
+    flex: 1; /* Faz os botões ocuparem tamanhos iguais */
+    padding: 1px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    text-decoration: none;
+    font-family: 'Inria Sans', sans-serif; /* Aplica a nova fonte */
+}
+
+.submit-btn,
+.download-btn {
+    flex: 0; /* Remove a expansão automática dos botões */
+    width: 350px; /* Define um tamanho fixo para os botões */
+    padding: 15px 80px; /* Reduz o padding interno */
+    font-size: 20px; /* Reduz o tamanho do texto dentro do botão */
+}
+
+.submit-btn {
+    background-color: white;
+    color: #2A2A2A;
+    border: 1px solid white;
+    border-radius: 15px;
+}
+
+.download-btn {
+    border: 1px solid #737373;
+    background: transparent;
+    color: #737373;
+    border-radius: 15px;
+}
+
+/* Efeito ao passar o mouse */
+.download-btn:hover {
+    border: 1px solid #2D1BD6;
+    background-color: #2D1BD6;
+    color: #ffffff;
+}
+
+
+.submit-btn:hover {
+    border: 1px solid #000000;
+    background-color: #FFD730;
+    color: #000000;
+}
