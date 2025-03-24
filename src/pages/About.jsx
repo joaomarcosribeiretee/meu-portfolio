@@ -1,8 +1,16 @@
-import React from "react";
-import PageTransition from "../components/PageTransition";
+import React, { useEffect } from "react";
+import PageTransition3 from "../components/PageTransition3";
 import "../styles/About.css";
 
 const About = () => {
+  // Aplica o cursor personalizado ao montar o componente
+  useEffect(() => {
+    document.body.style.cursor = "url('../icons/tec/cursor.png') 16 16, auto";
+    return () => {
+      document.body.style.cursor = "auto"; // Restaura o cursor padrão ao sair da página
+    };
+  }, []);
+
   // Função para tocar o áudio correspondente
   const playSound = (soundFile) => {
     const audio = new Audio(`/audio/${soundFile}`);
@@ -10,7 +18,7 @@ const About = () => {
   };
 
   return (
-    <PageTransition>
+    <PageTransition3>
       <div className="about-page">
         {/* Ícones Sociais */}
         <aside className="social-icons">
@@ -100,7 +108,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </PageTransition>
+    </PageTransition3>
   );
 };
 

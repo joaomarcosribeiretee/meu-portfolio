@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
-import PageTransition from "../components/PageTransition";
+import PageTransition5 from "../components/PageTransition5";
 import "swiper/css";
 import "swiper/css/pagination";
 import "../styles/Header.css";
@@ -16,7 +16,7 @@ const projectsData = [
       <br/><br/>
       <strong>Desenvolvido com:</strong> HTML, CSS, JavaScript, Express e MySQL, proporcionando funcionalidades como cadastro de campeonatos, gerenciamento de times e jogadores, geração automática de partidas e acompanhamento de desempenho em tempo real.
     `,
-    link: "https://github.com/joaomarcosribeiretee/projeto2",
+    link: "https://github.com/joaomarcosribeiretee/Gerenciador-de-Campeonatos-",
     media: { type: "video", src: "/videos/ligamaster.mp4" },
   },
   {
@@ -27,7 +27,7 @@ const projectsData = [
       <br/><br/>
       <strong>Desenvolvido com:</strong> HTML, CSS, JavaScript, Express, MySQL, integração com bcrypt para hashing de senhas e funcionalidades como registro de usuários, login, cadastro de produtos e carrinho de compras.
     `,
-    link: "https://github.com/joaomarcosribeiretee/projeto2",
+    link: "https://github.com/joaomarcosribeiretee/marketplace",
     media: { type: "video", src: "/videos/ligamaster.mp4" },
   },
   {
@@ -38,7 +38,7 @@ const projectsData = [
       <br/><br/>
       <strong>Desenvolvido com:</strong> HTML, CSS, JavaScript e Electron para a versão desktop, e React Native para a versão mobile, garantindo uma experiência fluida em múltiplas plataformas.
     `,
-    link: "https://github.com/joaomarcosribeiretee/projeto2",
+    link: "https://github.com/joaomarcosribeiretee/Flashcards-MOBILE",
     media: { type: "video", src: "/videos/ligamaster.mp4" },
   },
 ];
@@ -51,7 +51,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <PageTransition>
+    <PageTransition5>
       <div className={`projects-container ${fadeIn ? "fade-in" : "fade-out"}`}>
         <aside className="social-icons">
           <a href="https://www.instagram.com/joaomarcosribeirete/" target="_blank" rel="noopener noreferrer">
@@ -117,7 +117,7 @@ const Projects = () => {
           </svg>
         </div>
       </div>
-    </PageTransition>
+    </PageTransition5>
   );
 };
 

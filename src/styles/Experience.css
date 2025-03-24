@@ -1,35 +1,31 @@
-@import url("https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300;400;700&display=swap");
-/* Configuração da página de experiência */
 .experience-container {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     height: 100vh;
+    overflow-y: auto; /* 👈 scroll só nessa página */
     background-color: #2A2A2A;
     color: white;
     font-family: "Inria Serif", serif;
     text-align: center;
-}
-
-/* Wrapper para o conteúdo */
-.content-wrapper {
-    max-width: 1100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Título principal */
+    padding: 50px 0;
+  }
+  
+/* Ajuste do TÍTULO para ficar maior */
 .experience-title {
-    font-family: "Inria Serif", serif;
+    font-size: 70px; /* Aumentei o tamanho */
     font-weight: bold;
-    font-size: 60px;
-    letter-spacing: 0%;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin-bottom: 50px; /* Aumentei o espaçamento inferior */
+    transition: 
+    transform 0.3s ease-in-out,
+    color 0.3s ease-in-out;
+}
+
+.experience-title:hover {
+    color: #FFD730;
+    transform: scale(1.03);
 }
 
 /* Estilização da experiência profissional e acadêmica */
@@ -38,35 +34,138 @@
     align-items: flex-start;
     width: 100%;
     max-width: 900px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     text-align: left;
+    position: relative;
+}
+.page-transition {
+    overflow: auto; /* Permite rolar o conteúdo */
 }
 
-.timeline-marker {
-    width: 10px;
-    height: 10px;
+/* Timeline */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+    position: relative;
+    min-height: 100%; /* Garante que a altura sempre preencha o espaço */
+}
+
+/* Bolinha do ícone com animação */
+.circle-icon {
+    width: 30px;
+    height: 30px;
+    margin-top: 20px; /* Move a bolinha um pouco para cima */
+    z-index: 1;
+    transition: transform 0.3s ease-in-out; /* Suaviza o efeito ao passar o mouse */
+}
+
+/* Animação ao passar o mouse */
+.circle-icon:hover {
+    transform: scale(1.15); /* Aumenta 30% ao passar o mouse */
+}
+
+/* Linha vertical abaixo do círculo */
+.timeline-line {
+    width: 2px;
     background-color: white;
-    border-radius: 50%;
-    margin-right: 15px;
-    margin-top: 8px;
+    position: absolute;
+    border-radius: 5px;
+    top: 47px; /* Ajustado para alinhar melhor com o texto */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 90%;
+    height: calc(100% + 4px); /* Faz a linha acompanhar a experiência */
 }
 
+/* Linha vertical abaixo do círculo */
+.timeline-line2 {
+    width: 2px;
+    background-color: white;
+    position: absolute;
+    border-radius: 5px;
+    top: 47px; /* Ajustado para alinhar melhor com o texto */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 90%;
+    height: calc(85%); /* Faz a linha acompanhar a experiência */
+}
+
+/* Linha vertical abaixo do círculo */
+.timeline-line3 {
+    width: 2px;
+    background-color: white;
+    position: absolute;
+    border-radius: 5px;
+    top: 47px; /* Ajustado para alinhar melhor com o texto */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 90%;
+    height: 180px; /* Faz a linha acompanhar a experiência */
+}
+
+
+/* Ajuste do conteúdo da experiência */
+.experience-info {
+    flex: 1;
+    padding-top: 5px; /* Move o texto um pouco para cima */
+}
+
+/* Ajuste dos títulos dentro das experiências */
 .experience-info h2 {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
-    margin-bottom: 8px;
-    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
+/* Ajuste da descrição */
 .experience-info p {
     font-size: 16px;
-    line-height: 1.5;
+    font-family: 'Inria Sans', sans-serif;
+    line-height: 1.6;
+    font-weight: 50;
 }
+
+
 
 /* Ano no canto direito */
 .year {
     color: #FFD700;
     font-weight: bold;
     float: right;
+    margin-top: -3px;
+    font-size: 22px;
 }
 
+/* Ajuste para a posição correta do retângulo decorativo */
+/* Ajuste para a posição correta do retângulo decorativo */
+.corner-decor3 {
+    position: fixed;
+    top: 0; /* Colado no topo */
+    right: 210px; /* Colado no canto direito */
+    z-index: 100;
+}
+
+.corner-decor3 img {
+    width: 60px;
+    height: auto;
+    opacity: 0.8;
+}
+
+
+/* Hover com entrada e saída suave */
+.experience-info p,
+.experience-info h2,
+.year {
+    transition: 
+        transform 0.3s ease-in-out,
+        text-shadow 0.3s ease-in-out;
+}
+
+.experience-info p:hover,
+.experience-info h2:hover,
+.year:hover {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+    transform: translateX(5px);
+}
