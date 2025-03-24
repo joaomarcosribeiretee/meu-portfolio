@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/joaomarcosdev.github.io/static/css/main.69de2c77.css",
-    "main.js": "/joaomarcosdev.github.io/static/js/main.76670140.js",
-    "index.html": "/joaomarcosdev.github.io/index.html",
-    "main.69de2c77.css.map": "/joaomarcosdev.github.io/static/css/main.69de2c77.css.map",
-    "main.76670140.js.map": "/joaomarcosdev.github.io/static/js/main.76670140.js.map"
+    "main.css": "/static/css/main.69de2c77.css",
+    "main.js": "/static/js/main.a6c7ff1b.js",
+    "index.html": "/index.html",
+    "main.69de2c77.css.map": "/static/css/main.69de2c77.css.map",
+    "main.a6c7ff1b.js.map": "/static/js/main.a6c7ff1b.js.map"
   },
   "entrypoints": [
     "static/css/main.69de2c77.css",
-    "static/js/main.76670140.js"
+    "static/js/main.a6c7ff1b.js"
   ]
 }
