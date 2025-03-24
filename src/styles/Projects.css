@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300;400;700&display=swap");
 
+
 .projects-container {
     font-family: "Inria Serif", serif;
 }
@@ -39,18 +40,16 @@
 }
 
 /* Descrição */
-.projects-description {
-    font-family: 'Inria Sans', sans-serif; /* Aplica a nova fonte */
-    max-width: 1400px;
-    font-size: 1.1rem;
+.project-description {
+    font-family: 'Inria Sans', sans-serif; /* Aplica a fonte correta */
+    font-size: 15px;
     line-height: 1.6;
-    font-weight: lighter;
-    margin-bottom: 30px;
-    margin-top: 5px;
-    text-align: center; /* Mantém a centralização */
+    margin-bottom: 20px;
+    max-width: 600px;
 }
 
 .project-description strong {
+        font-family: 'Inria Sans', sans-serif; /* Aplica a fonte correta */
     font-weight:900; /* Garante o negrito */
     color: #FFD700; /* Opcional: cor diferente para destacar */
 }
@@ -93,6 +92,7 @@
 }
 
 .project-subtitle {
+    font-family: "Inria Serif", serif;
     font-size: 22px;
     font-weight: 300;
     text-transform: uppercase;
@@ -101,7 +101,8 @@
 }
 
 .project-title {
-    font-size: 75px;
+    font-family: "Inria Serif", serif;
+    font-size: 80px;
     font-weight: 700;
     margin-bottom: 5px;
     margin-top: -5px;
@@ -109,6 +110,7 @@
 }
 
 .project-description {
+    font-family: 'Inria Sans', sans-serif; /* Aplica a fonte correta */
     font-size: 15px;
     line-height: 1.6;
     margin-bottom: 20px;
@@ -143,7 +145,7 @@
 /* Ajuste para a posição correta do retângulo decorativo */
 .corner-decor2 {
     position: fixed;
-    bottom: 850px;
+    bottom: 800px;
     left: 0px;
     z-index: 900;
 }
@@ -207,6 +209,7 @@
 
 .projects-link:hover {
     color: #ffeb75;
+    cursor: url(https://cur.cursors-4u.net/cursors/cur-7/cur638.cur), auto !important;
 }
 
 .wave-container2 {
@@ -230,4 +233,38 @@
     50% { transform: translateY(15px); } /* Sobe um pouco */
     100% { transform: translateY(0px); } /* Volta para a posição inicial */
   }
-  
+
+  /* Animação suave para entrada e saída dos textos */
+.project-description,
+.project-subtitle,
+.projects-description,
+.project-title,
+.projects-link {
+    transition: 
+        transform 0.3s ease-in-out,
+        text-shadow 0.3s ease-in-out,
+        color 0.3s ease-in-out;
+}
+
+/* Hover nos textos: leve brilho e deslize */
+.project-description:hover,
+.project-subtitle:hover,
+.projects-description:hover {
+    transform: translateX(2px);
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+.projects-title {
+    font-family: "Inria Serif", serif;
+    font-weight: 700;
+    font-size: 78px;
+    letter-spacing: 0%;
+    margin-bottom: 25px;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.projects-title:hover {
+    color: #FFD730;
+    transform: scale(1.05);
+}
+

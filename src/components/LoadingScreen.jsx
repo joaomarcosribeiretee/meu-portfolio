@@ -16,7 +16,7 @@ const LoadingScreen = ({ onLoadingComplete }) => {
         }
         return prev + 1;
       });
-    }, 30); // Velocidade do preenchimento
+    }, 15); // Velocidade do preenchimento
 
     return () => clearInterval(interval);
   }, [onLoadingComplete]);

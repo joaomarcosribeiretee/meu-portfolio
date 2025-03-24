@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import PageTransition from "../components/PageTransition";
+import PageTransition6 from "../components/PageTransition6";
 import "../styles/Skills.css";
 
 const Skills = () => {
@@ -11,7 +11,7 @@ const Skills = () => {
   
   
   return (
-    <PageTransition>
+    <PageTransition6>
     <div className={`skills-container ${fadeIn ? "fade-in" : "fade-out"}`}>
       {/* ÍCONES SOCIAIS DENTRO DO CONTAINER */}
       <aside className="social-icons">
@@ -83,7 +83,7 @@ const Skills = () => {
         </div>
       </div>
     </div>
-  </PageTransition>
+  </PageTransition6>
   
   );
 };

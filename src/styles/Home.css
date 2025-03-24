@@ -25,6 +25,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  
 }
 
 .social-icons a img {
@@ -37,6 +38,7 @@ body {
 .social-icons a img:hover {
   transform: scale(1.2);
   opacity: 1;
+  cursor: url(https://cur.cursors-4u.net/cursors/cur-7/cur638.cur), auto !important;
 }
 
 .content {

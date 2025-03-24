@@ -15,6 +15,7 @@
   display: flex;
   align-items: center;
   transition: transform 0.3s ease-in-out, opacity 0.3s;
+  cursor: url(https://cur.cursors-4u.net/cursors/cur-7/cur638.cur), auto !important;
 }
 
 .menu-button:hover {
@@ -52,6 +53,7 @@
   padding: 0; /* Remove o padding interno */
   color: #fff;
   font-family: 'Inria Sans', sans-serif;
+  
 }
 
 /* Menu aberto */
@@ -70,6 +72,7 @@
   margin-top: 12px;
   cursor: pointer;
   transition: transform 0.3s ease-in-out, opacity 0.3s;
+  cursor: url(https://cur.cursors-4u.net/cursors/cur-7/cur638.cur), auto !important;
 }
 
 /* Links do menu */
@@ -77,6 +80,7 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  
 }
 
 .menu ul li {
@@ -107,6 +111,7 @@
 .menu ul li a:hover {
   background-color: #555; /* Fundo mais escuro ao passar o mouse */
   color: #bbb; /* Cor do texto ao passar o mouse */
+  cursor: url(https://cur.cursors-4u.net/cursors/cur-7/cur638.cur), auto !important;
 }
 
 /* Destaque para o item ativo */
