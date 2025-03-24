@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/meu-portfolio/static/css/main.69de2c77.css",
-    "main.js": "/meu-portfolio/static/js/main.e87f21b4.js",
-    "index.html": "/meu-portfolio/index.html",
-    "main.69de2c77.css.map": "/meu-portfolio/static/css/main.69de2c77.css.map",
-    "main.e87f21b4.js.map": "/meu-portfolio/static/js/main.e87f21b4.js.map"
+    "main.css": "/joaomarcosdev.github.io/static/css/main.69de2c77.css",
+    "main.js": "/joaomarcosdev.github.io/static/js/main.76670140.js",
+    "index.html": "/joaomarcosdev.github.io/index.html",
+    "main.69de2c77.css.map": "/joaomarcosdev.github.io/static/css/main.69de2c77.css.map",
+    "main.76670140.js.map": "/joaomarcosdev.github.io/static/js/main.76670140.js.map"
   },
   "entrypoints": [
     "static/css/main.69de2c77.css",
-    "static/js/main.e87f21b4.js"
+    "static/js/main.76670140.js"
   ]
 }
