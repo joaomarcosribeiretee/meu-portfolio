@@ -1,0 +1,28 @@
+.mobile-notice {
+    display: none;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .mobile-notice {
+      display: flex;
+      position: fixed;
+      z-index: 9999;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #2F2F2F;
+      color: rgb(255, 255, 255);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.3rem;
+      text-align: center;
+      font-family: 'Inria Sans', sans-serif; /* Aplica a nova fonte */
+    }
+  
+    #root > *:not(.mobile-notice) {
+      display: none !important;
+    }
+  }
+  

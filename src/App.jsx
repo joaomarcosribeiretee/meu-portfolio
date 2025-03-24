@@ -8,8 +8,9 @@ import Skills from "./pages/Skills";
 import LoadingScreen from "./components/LoadingScreen";
 import "./styles/App.css";
 import Projects from "./pages/Projects";
-import Experience from "./pages/Experience"
+import Experience from "./pages/Experience";
 import Contact from "./pages/Contact";
+import MobileNotice from "./components/MobileNotice";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -17,15 +18,12 @@ const AnimatedRoutes = () => {
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
-        {/* 🚀 Página inicial definida corretamente */}
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/skills" element={<Skills />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/experience" element={<Experience />} />
         <Route path="/contact" element={<Contact />} />
-
-        {/* 🚨 Redirecionamento caso a rota não exista */}
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </AnimatePresence>
@@ -35,6 +33,21 @@ const AnimatedRoutes = () => {
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [fadeIn, setFadeIn] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Detecta se a tela é menor que 768px
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    handleResize(); // Chamada inicial
+    window.addEventListener("resize", handleResize); // Atualiza ao redimensionar
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     if (!isLoading) {
@@ -46,6 +59,8 @@ const App = () => {
     <Router>
       {isLoading ? (
         <LoadingScreen onLoadingComplete={() => setIsLoading(false)} />
+      ) : isMobile ? (
+        <MobileNotice />
       ) : (
         <div className={`app-container ${fadeIn ? "fade-in" : ""}`}>
           <Header />
