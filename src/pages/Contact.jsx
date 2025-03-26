@@ -37,7 +37,7 @@ const Contact = () => {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/docs/JoaoMarcos_CV.pdf";
+    link.href = `${process.env.PUBLIC_URL}/docs/JoaoMarcos_CV.pdf`; // Corrigido o caminho
     link.setAttribute("download", "JoaoMarcos_CV.pdf");
     document.body.appendChild(link);
     link.click();
@@ -55,17 +55,6 @@ const Contact = () => {
   return (
     <PageTransition4>
       <div className="contact-container">
-        <aside className="social-icons">
-          <a href="https://www.instagram.com/joaomarcosribeirete/" target="_blank" rel="noopener noreferrer">
-            <img src="/icons/instagram.svg" alt="Instagram" />
-          </a>
-          <a href="https://github.com/joaomarcosribeiretee" target="_blank" rel="noopener noreferrer">
-            <img src="/icons/github.svg" alt="GitHub" />
-          </a>
-          <a href="https://www.linkedin.com/in/joaomarcosribeirete/" target="_blank" rel="noopener noreferrer">
-            <img src="/icons/linkedin.svg" alt="LinkedIn" />
-          </a>
-        </aside>
 
         <div className="contact-form">
           <h1 className="contact-title">Contato.</h1>

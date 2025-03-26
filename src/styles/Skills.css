@@ -1,267 +1,277 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300;400;700&display=swap");
 
-body {
-    overflow: hidden;
-}
-
 .skills-container {
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Centraliza o conteúdo, como no Home */
-    height: 100vh; /* Mantém o tamanho igual às outras páginas */
+    padding: 40px 20px;
+    min-height: 100vh;
     background-color: #2A2A2A;
     color: white;
     font-family: "Inria Serif", serif;
-}
+    overflow-x: hidden;
+    overflow-y: auto; /* garante que scroll apareça */
+    position: relative;
+  }
+  
 
 /* Título principal */
 .skills-title {
-    font-family: "Inria Serif", serif;
-    font-weight: bold;
-    font-size: 112px;
-    letter-spacing: 0%;
-    margin-bottom: 10px;
-    transition: transform 0.5s ease-in-out, color 0.5s ease-in-out;
+  font-family: "Inria Serif", serif;
+  font-weight: bold;
+  font-size: 112px;
+  letter-spacing: 0%;
+  margin-bottom: 10px;
+  transition: transform 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 
 .skills-title:hover {
-    transform: scale(1.001);
-    color: #FFD730;
+  transform: translateY(-3px) scale(1.05); 
+  color: #FFD730;
 }
 
 /* Subtítulo */
 .skills-subtitle {
-    font-size: 1.2rem;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    font-weight: 400;
+  font-size: 1.2rem;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-weight: 400;
+  transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+  padding-left: 4rem;
+  padding-right: 2rem;
+  z-index: 1;
+}
+
+.skills-subtitle:hover {
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+  transform: scale(1.03);
 }
 
 /* Descrição */
 .skills-description {
-    max-width: 1400px;
-    font-size: 1.2rem;
-    margin: 10px auto;
-    line-height: 1.4;
-    font-weight: lighter;
+  max-width: 1400px;
+  font-size: 1.2rem;
+  margin: 10px auto;
+  line-height: 1.4;
+  font-weight: lighter;
+  transition: transform 0.3s ease-in-out;
+  padding-left: 4rem;
+  padding-right: 2rem;
+  z-index: 1;
 }
 
-.skills-title:hover {
-    transform: translateY(-5px) scale(1.15);
-    color: #CDC033;
-  }
-  
-  .skills-description, .skills-subtitle:hover {
-    transform:scale(1.05);
-  }
-  
+.skills-description:hover {
+  transform: scale(1.03);
+}
 
 .skills-description strong {
-    font-weight: bold;
-    color: white;
+  font-weight: bold;
+  color: white;
 }
 
-/* Link para o LinkedIn */
+/* LinkedIn */
 .skills-linkedin {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease-in-out;
+  padding-left: 4rem;
+  padding-right: 2rem;
+  z-index: 1;
 }
 
-.skills-linkedin a {
-    color: #FFD700;
-    text-decoration: none;
-    font-weight: bold;
+.skills-linkedin:hover {
+  transform: scale(1.03);
 }
 
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    column-gap: 21px;
-    row-gap: 12px;
-    max-width: 900px;
-    margin-top: 50px;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Estilo dos ícones */
-.skill-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: transform 0.3s ease-in-out;
-}
-
-.skill-item:hover {
-    transform: scale(1.1);
-    
-}
-
-.skill-icon {
-    width: 130px;
-    height: 130px;
-    margin-bottom: 35px;
-}
-
-/* Ícones sociais ajustados */
-/* Ícones sociais ajustados */
-.social-icons {
-    position: absolute;
-    left: 20px; /* Mantém os ícones alinhados à esquerda */
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    z-index: 10; /* Mantém acima do conteúdo */
-}
-
-.skills-container {
-    position: relative; /* Garante que os ícones sociais sejam posicionados em relação a este container */
-}
-
-  
-  .social-icons a img {
-    width: 55px;
-    height: 55px;
-    opacity: 1;
-    transition: transform 0.3s ease-in-out, opacity 0.3s;
-  }
-  
-  .social-icons a img:hover {
-    transform: scale(1.2);
-    opacity: 1;
-  }
-  
-
-
-/* Animação do sublinhado no LinkedIn */
 .linkedin-link {
-    position: relative;
-    display: inline-block;
-    color: #FFD700;
-    text-decoration: none;
-    transition: transform 0.3s ease-in-out, color 0.3s;
+  color: #FFD700;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s ease-in-out, color 0.3s;
+  animation: linkedinGlow 1.5s infinite alternate ease-in-out;
 }
 
 .linkedin-link::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 2px;
-    background: #FFD700;
-    position: absolute;
-    left: 0;
-    bottom: -3px;
-    transform: scaleX(0);
-    transition: transform 0.3s ease-in-out;
-    
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #FFD700;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
 }
 
 .linkedin-link:hover::after {
-    transform: scaleX(1);
+  transform: scaleX(1);
 }
 
 .linkedin-link:hover {
-    color: #ffeb75;
-    transform: scale(1.1);
-    cursor: url(https://cur.cursors-4u.net/cursors/cur-7/cur638.cur), auto !important;
+  color: #ffeb75;
+  transform: scale(1.1);
+  cursor: url(https://cur.cursors-4u.net/cursors/cur-7/cur638.cur), auto !important;
 }
 
 @keyframes linkedinGlow {
-    from {
-        text-shadow: 0 0 5px #FFD700;
-    }
-    to {
-        text-shadow: 0 0 10px #FFD700;
-    }
+  from {
+    text-shadow: 0 0 5px #FFD700;
+  }
+  to {
+    text-shadow: 0 0 10px #FFD700;
+  }
 }
 
-.linkedin-link {
-    animation: linkedinGlow 1.5s infinite alternate ease-in-out;
-}
-
-/* Wrapper para centralizar todo o conteúdo sem afetar os ícones sociais */
 .content-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-    max-width: 1200px;
-    padding: 20px;
-    margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 60px;
+  z-index: 1;
 }
 
-/* Retângulos no canto inferior esquerdo */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  column-gap: 21px;
+  row-gap: 12px;
+  max-width: 900px;
+  width: 100%;
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.skill-item:hover {
+  transform: scale(1.1);
+}
+
+.skill-icon {
+  width: 130px;
+  height: 130px;
+  margin-bottom: 35px;
+}
+
 .corner-decor {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    z-index: 900;
+  position: absolute;
+  bottom: 150px;
+  left: 0px;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .corner-decor img {
-    width: 200px;
-    height: auto;
-    opacity: 0.8;
-}
-
-/* Retângulos no canto inferior esquerdo */
-.corner-decor {
-    position: fixed;
-    bottom: 50px;
-    left: 0px;
-    z-index: 900;
-}
-
-.corner-decor img {
-    width: 230px;
-    height: auto;
-    opacity: 0.8;
+  width: min(230px, 30vw);
+  max-width: 100%;
+  height: auto;
+  opacity: 0.8;
 }
 
 .wave-container2 {
-    position: absolute;
-    bottom: -10px; /* Reduzindo a posição inicial para descer um pouco */
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-  }
-  
-  .wave-svg {
-    width: 100%;
-    opacity: 30%;
-    height: auto;
-    animation: waveMove 5s infinite ease-in-out;
-  }
-  
-  /* Animação suave de subir e descer */
-  @keyframes waveMove {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(15px); } /* Sobe um pouco */
-    100% { transform: translateY(0px); } /* Volta para a posição inicial */
-  }
-  
-  /* Transição suave nos textos */
-.skills-subtitle,
-.skills-description,
-.skills-linkedin {
-    transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
 }
 
-/* Efeito suave ao passar o mouse */
-.skills-subtitle:hover,
-.skills-linkedin:hover {
-    text-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
-    transform: scale(1.03);
+.wave-svg {
+  width: 100%;
+  opacity: 30%;
+  height: auto;
+  animation: waveMove 5s infinite ease-in-out;
 }
 
+@keyframes waveMove {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(15px); }
+  100% { transform: translateY(0px); }
+}
 
-.skills-description:hover {
-    transform: scale(1.09);
+@media (max-width: 1024px) {
+  .skills-title {
+    font-size: 72px;
+  }
+  .skills-description,
+  .skills-subtitle,
+  .skills-linkedin {
+    font-size: 1rem;
+    padding: 0 2rem 0 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-title {
+    font-size: 56px;
+  }
+  .skills-description,
+  .skills-subtitle,
+  .skills-linkedin {
+    font-size: 0.95rem;
+    padding: 0 1.5rem 0 2.5rem;
+  }
+  .skill-icon {
+    width: 70px;
+    height: 70px;
+  }
+  .social-icons {
+    display: none;
+  }
+  .corner-decor {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-title {
+    font-size: 40px;
+  }
+  .skills-description,
+  .skills-subtitle,
+  .skills-linkedin {
+    font-size: 0.85rem;
+    padding: 0 1rem 0 1.5rem;
+  }
+  .skill-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+  }
+  .corner-decor img {
+    width: 120px;
+  }
+}
+
+@media (max-width: 360px) {
+  .skills-title {
+    font-size: 32px;
+  }
+  .skills-description,
+  .skills-subtitle,
+  .skills-linkedin {
+    font-size: 0.75rem;
+    padding: 0 0.5rem 0 1.2rem;
+  }
+  .skill-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  .corner-decor img {
+    width: 100px;
+  }
 }

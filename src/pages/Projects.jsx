@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import PageTransition5 from "../components/PageTransition5";
@@ -17,7 +17,7 @@ const projectsData = [
       <strong>Desenvolvido com:</strong> HTML, CSS, JavaScript, Express e MySQL, proporcionando funcionalidades como cadastro de campeonatos, gerenciamento de times e jogadores, geração automática de partidas e acompanhamento de desempenho em tempo real.
     `,
     link: "https://github.com/joaomarcosribeiretee/Gerenciador-de-Campeonatos-",
-    media: { type: "video", src: "/videos/ligamaster.mp4" },
+    media: { type: "video", src: `${process.env.PUBLIC_URL}/videos/ligamaster.mp4` },
   },
   {
     title: "MARKETPLACE",
@@ -28,7 +28,7 @@ const projectsData = [
       <strong>Desenvolvido com:</strong> HTML, CSS, JavaScript, Express, MySQL, integração com bcrypt para hashing de senhas e funcionalidades como registro de usuários, login, cadastro de produtos e carrinho de compras.
     `,
     link: "https://github.com/joaomarcosribeiretee/marketplace",
-    media: { type: "video", src: "/videos/ligamaster.mp4" },
+    media: { type: "video", src: `${process.env.PUBLIC_URL}/videos/MarketPlace.mp4` },
   },
   {
     title: "FLASHCARDS",
@@ -39,37 +39,47 @@ const projectsData = [
       <strong>Desenvolvido com:</strong> HTML, CSS, JavaScript e Electron para a versão desktop, e React Native para a versão mobile, garantindo uma experiência fluida em múltiplas plataformas.
     `,
     link: "https://github.com/joaomarcosribeiretee/Flashcards-MOBILE",
-    media: { type: "video", src: "/videos/ligamaster.mp4" },
+    media: { type: "video", src: `${process.env.PUBLIC_URL}/videos/Flashcards.mp4` },
   },
 ];
 
 const Projects = () => {
   const [fadeIn, setFadeIn] = useState(false);
 
+  const swiperRef = useRef(null); // Referência para o Swiper
+  const videoRefs = useRef([]); // Ref para armazenar os vídeos
+
   useEffect(() => {
     setTimeout(() => setFadeIn(true), 50);
   }, []);
 
+  // Função para pausar os vídeos
+  const pauseAllVideos = () => {
+    videoRefs.current.forEach((video) => {
+      if (video) {
+        video.pause();
+        video.currentTime = 0; // Reseta o vídeo para o início
+      }
+    });
+  };
+
   return (
     <PageTransition5>
       <div className={`projects-container ${fadeIn ? "fade-in" : "fade-out"}`}>
-        <aside className="social-icons">
-          <a href="https://www.instagram.com/joaomarcosribeirete/" target="_blank" rel="noopener noreferrer">
-            <img src="/icons/instagram.svg" alt="Instagram" className="social-icon" />
-          </a>
-          <a href="https://github.com/joaomarcosribeiretee" target="_blank" rel="noopener noreferrer">
-            <img src="/icons/github.svg" alt="GitHub" className="social-icon" />
-          </a>
-          <a href="https://www.linkedin.com/in/joaomarcosribeirete/" target="_blank" rel="noopener noreferrer">
-            <img src="/icons/linkedin.svg" alt="LinkedIn" className="social-icon" />
-          </a>
-        </aside>
 
         <div className="corner-decor2">
-          <img src="/icons/Retangulos.png" alt="Decoração" />
+          <img src={`${process.env.PUBLIC_URL}/icons/Retangulos.png`} alt="Decoração" />
         </div>
 
-        <Swiper modules={[Pagination]} pagination={{ clickable: true }} spaceBetween={50} slidesPerView={1} className="projects-swiper">
+        <Swiper
+          ref={swiperRef}
+          modules={[Pagination]}
+          pagination={{ clickable: true }}
+          spaceBetween={50}
+          slidesPerView={1}
+          className="projects-swiper"
+          onSlideChange={pauseAllVideos} // Pausa todos os vídeos ao mudar de slide
+        >
           <SwiperSlide className="first-slide">
             <div className="content-wrapper">
               <h1 className="projects-title">PORTFOLIO & PROJETOS</h1>
@@ -99,7 +109,11 @@ const Projects = () => {
                   {project.media.type === "image" ? (
                     <img src={project.media.src} alt={project.title} className="project-media" />
                   ) : (
-                    <video controls className="project-media">
+                    <video
+                      ref={(el) => (videoRefs.current[index] = el)} // Armazena a referência do vídeo
+                      controls
+                      className="project-media"
+                    >
                       <source src={project.media.src} type="video/mp4" />
                       Seu navegador não suporta o elemento de vídeo.
                     </video>

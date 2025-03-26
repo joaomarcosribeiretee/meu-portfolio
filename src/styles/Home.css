@@ -1,53 +1,34 @@
-@import url("https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300;400;700&display=swap");
-/* Estilos gerais */
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&family=Inria+Serif:wght@300;400;700&family=Pixelify+Sans&display=swap");
+
+/* Estilo geral */
 body {
   margin: 0;
-  font-family: 'Pixelify Sans', sans-serif;
   background-color: #2F2F2F;
   color: #ffffff;
+  overflow-x: hidden;
 }
 
-/* Centralizar o texto na tela */
 .home-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   text-align: center;
   position: relative;
+  box-sizing: border-box;
+  padding: 0 8rem;
 }
 
-.social-icons {
-  position: absolute;
-  left: 20px;
-  top: 52%;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  
-}
-
-.social-icons a img {
-  width: 55px;
-  height: 55px;
-  opacity: 1;
-  transition: transform 0.3s ease-in-out, opacity 0.3s;
-}
-
-.social-icons a img:hover {
-  transform: scale(1.2);
-  opacity: 1;
-  cursor: url(https://cur.cursors-4u.net/cursors/cur-7/cur638.cur), auto !important;
-}
-
+/* Centralização */
 .content {
   text-align: center;
   max-width: 1000px;
   margin: 0 auto;
+  width: 100%;
 }
 
 .content h1 {
+  font-family: 'Pixelify Sans', cursive;
   font-size: 44px;
   margin-bottom: 20px;
   text-align: center;
@@ -60,7 +41,7 @@ body {
   text-align: left;
 }
 
-/* Animação nos textos */
+/* Animação */
 .home-text {
   font-size: 1.5rem;
   transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
@@ -77,15 +58,18 @@ body {
 }
 
 .home-text2:hover {
-  transform:scale(1.05);
+  transform: scale(1.05);
 }
 
+/* Onda decorativa */
 .wave-container {
   position: absolute;
-  bottom: -10px; /* Reduzindo a posição inicial para descer um pouco */
+  bottom: 0;
   left: 0;
   width: 100%;
   overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
 }
 
 .wave-svg {
@@ -95,9 +79,59 @@ body {
   animation: waveMove 5s infinite ease-in-out;
 }
 
-/* Animação suave de subir e descer */
 @keyframes waveMove {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(15px); } /* Sobe um pouco */
-  100% { transform: translateY(0px); } /* Volta para a posição inicial */
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(15px); }
+  100% { transform: translateY(0px); }
+}
+
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .content h1 {
+    font-size: 30px;
+  }
+
+  .content p {
+    font-size: 16px;
+    text-align: justify;
+  }
+
+  .home-text,
+  .home-text2 {
+    font-size: 1.2rem;
+  }
+
+  .social-icons {
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 2rem;
+    transform: none;
+  }
+
+  .social-icons img {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-container {
+    padding: 0 1rem;
+  }
+
+  .content h1 {
+    font-size: 26px;
+  }
+
+  .content p {
+    font-size: 15px;
+  }
+
+  .home-text,
+  .home-text2 {
+    font-size: 1.05rem;
+  }
 }

@@ -1,30 +1,61 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* evita scroll lateral */
+  overflow-y: auto;   /* deixa o scroll aparecer automaticamente quando necessário */
+}
 
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-container.scroll-enabled {
+  overflow-y: auto; /* ✅ scroll aparece quando necessário */
+  overflow-y: overlay;
+
+}
+
+/* Fade da Home */
 .home-screen {
-    opacity: 0;
-    transition: opacity 0.7s ease; /* Transição suave para o fade-in */
-  }
-  
-  .home-screen.fade-in {
-    opacity: 1; /* Aparece gradualmente */
-  }
-  
-  .app-container {
-    display: flex;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+
+.home-screen.fade-in {
+  opacity: 1;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .container {
     flex-direction: column;
-    min-height: 100vh; /* Garante altura total da tela */
+    padding: 1rem;
   }
-  
-  .content-container {
-    flex: 1; /* Faz com que o conteúdo cresça e empurre o Footer para baixo */
-  }
-  
-  .footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #222;
-    color: #aaa;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-  }
-  
+}
+
+.content-container {
+  flex: 1;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #222;
+  color: #aaa;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.app-container.transitioning {
+  overflow-y: hidden !important;
+}

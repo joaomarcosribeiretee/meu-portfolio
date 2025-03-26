@@ -16,7 +16,6 @@ const pageVariants = {
     transition: { duration: 0.6, ease: "easeInOut" }
   }
 };
-
 const PageTransition = ({ children }) => {
   return (
     <motion.div
@@ -24,7 +23,11 @@ const PageTransition = ({ children }) => {
       animate="in"
       exit="out"
       variants={pageVariants}
-      style={{ position: "absolute", width: "100%" }}
+      style={{
+        position: "relative",
+        width: "100%",
+        minHeight: "100vh", // garante altura mínima
+      }}
     >
       {children}
     </motion.div>
