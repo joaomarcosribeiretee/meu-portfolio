@@ -199,23 +199,3 @@
     }
   }
   
-  @media (max-width: 480px) {
-    .experience-title {
-      font-size: 2.3rem;
-    }
-  
-    .experience-info h2 {
-      font-size: 18px;
-    }
-  
-    .experience-info p {
-      font-size: 14px;
-    }
-  
-    .timeline-line,
-    .timeline-line2,
-    .timeline-line3 {
-      height: 80px;
-    }
-  }
-  

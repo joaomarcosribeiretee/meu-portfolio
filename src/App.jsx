@@ -52,7 +52,7 @@ const AppContent = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
-  const isScrollablePage = ["/experience", "/about", "/projects"].includes(location.pathname);
+  const isScrollablePage = ["/experience", "/about", "/projects", "/skills"].includes(location.pathname);
 
   // Transição bloqueia scroll temporariamente
   useEffect(() => {
@@ -73,7 +73,7 @@ const AppContent = () => {
   // Responsividade
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
+      setIsMobile(window.innerWidth < 1024);
     };
 
     handleResize();

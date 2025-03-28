@@ -116,22 +116,3 @@ body {
     height: 36px;
   }
 }
-
-@media (max-width: 480px) {
-  .home-container {
-    padding: 0 1rem;
-  }
-
-  .content h1 {
-    font-size: 26px;
-  }
-
-  .content p {
-    font-size: 15px;
-  }
-
-  .home-text,
-  .home-text2 {
-    font-size: 1.05rem;
-  }
-}

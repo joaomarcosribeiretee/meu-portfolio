@@ -1,10 +1,11 @@
 html, body {
-  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* evita scroll lateral */
-  overflow-y: auto;   /* deixa o scroll aparecer automaticamente quando necessário */
+  height: 100%;
 }
+
 
 .app-container {
   min-height: 100vh;
