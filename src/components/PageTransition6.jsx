@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const pageVariants = {
   initial: {
     opacity: 0,
-    scale: 1.2, // Começa maior e diminui
+    scale: 1, // Começa maior e diminui
   },
   in: {
     opacity: 1,

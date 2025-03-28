@@ -43,8 +43,11 @@ const PageTransition = ({ children }) => {
       style={{
         position: "relative",
         width: "100%",
-        overflow: "hidden",
+        minHeight: "100vh", // garante que não haja quebra
+        overflowX: "hidden", // evita scroll lateral
+        overflowY: "hidden",   // deixa o scroll vertical visível e estável
       }}
+      
     >
       {children}
     </motion.div>

@@ -67,7 +67,7 @@ const Projects = () => {
           className="projects-swiper"
         >
           <SwiperSlide className="first-slide">
-            <div className="content-wrapper">
+            <div className="content-wrapper2">
               <h1 className="projects-title">PORTFOLIO & PROJETOS</h1>
               <p className="projects-description">
                 Aqui estão alguns dos projetos que desenvolvi, cada um focado em atender demandas específicas com soluções criativas.

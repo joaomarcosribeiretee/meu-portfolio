@@ -155,47 +155,20 @@
   /* ======================= */
   /* MEDIA QUERIES           */
   /* ======================= */
-  @media (max-width: 900px) {
-    .experience-item {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 10px;
-    }
+  @media (max-width: 1440px) {
+      .corner-decor3 {
+        right: 140px;
+      }
+  }
   
-    .timeline {
-      flex-direction: row;
-      justify-content: flex-start;
-      margin-bottom: 10px;
-      margin-right: 0;
-    }
-  
-    /* Mantém as linhas, só ajusta se necessário */
-    .timeline-line,
-    .timeline-line2,
-    .timeline-line3 {
-      height: 100px;
-    }
-  
-    .experience-title {
-      font-size: 3rem;
-    }
-  
-    .experience-info h2 {
-      font-size: 20px;
-    }
-  
-    .experience-info p {
-      font-size: 15px;
-    }
-  
-    .year {
-      float: none;
-      font-size: 18px;
-      margin-top: 5px;
-    }
-  
+  @media (max-width: 1366px) {
     .corner-decor3 {
-      display: none;
+      right: 120px;
     }
   }
   
+  @media (max-width: 1024px) {
+    .corner-decor3 {
+      right: 140px;
+    }
+  }

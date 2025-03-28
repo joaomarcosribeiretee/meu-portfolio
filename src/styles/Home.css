@@ -92,36 +92,6 @@ body {
   100% { transform: translateY(0px); }
 }
 
-/* Responsivo para mobile */
-@media (max-width: 768px) {
-  .content h1 {
-    font-size: 30px;
-  }
-
-  .content p {
-    font-size: 16px;
-    text-align: justify;
-  }
-
-  .home-text,
-  .home-text2 {
-    font-size: 1.2rem;
-  }
-
-  .social-icons {
-    position: static;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 2rem;
-    transform: none;
-  }
-
-  .social-icons img {
-    width: 36px;
-    height: 36px;
-  }
-}
-
 /* Ajuste específico para notebooks (resoluções entre 1024px e 1440px) */
 @media (max-width: 1440px) and (min-width: 1024px) {
   .content h1 {
