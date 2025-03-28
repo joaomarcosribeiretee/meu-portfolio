@@ -27,6 +27,7 @@ const PageTransition = ({ children }) => {
         position: "relative",
         width: "100%",
         minHeight: "100vh", // garante altura mínima
+
       }}
     >
       {children}
