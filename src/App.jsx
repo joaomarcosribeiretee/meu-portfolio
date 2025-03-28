@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Routes,
   Route,
   Navigate,
@@ -100,7 +100,7 @@ const AppContent = () => {
   );
 };
 
-// Componente com roteador
+// Componente com roteador (usando HashRouter para GitHub Pages)
 const App = () => (
   <Router>
     <AppContent />
