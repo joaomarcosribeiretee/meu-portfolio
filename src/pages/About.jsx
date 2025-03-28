@@ -1,11 +1,12 @@
 import React, { useEffect } from "react";
 import PageTransition3 from "../components/PageTransition3";
+
 import "../styles/About.css";
 
 const About = () => {
   // Aplica o cursor personalizado ao montar o componente
   useEffect(() => {
-    document.body.style.cursor = "url('../icons/tec/cursor.png') 16 16, auto";
+    document.body.style.cursor = ('')
     return () => {
       document.body.style.cursor = "auto"; // Restaura o cursor padrão ao sair da página
     };
@@ -13,30 +14,18 @@ const About = () => {
 
   // Função para tocar o áudio correspondente
   const playSound = (soundFile) => {
-    const audio = new Audio(`/audio/${soundFile}`);
+    const audio = new Audio(`${process.env.PUBLIC_URL}/audio/${soundFile}`);
     audio.play();
   };
 
   return (
     <PageTransition3>
       <div className="about-page">
-        {/* Ícones Sociais */}
-        <aside className="social-icons">
-          <a href="https://www.instagram.com/joaomarcosribeirete/" target="_blank" rel="noopener noreferrer">
-            <img src="/icons/instagram.svg" alt="Instagram" />
-          </a>
-          <a href="https://github.com/joaomarcosribeiretee" target="_blank" rel="noopener noreferrer">
-            <img src="/icons/github.svg" alt="GitHub" />
-          </a>
-          <a href="https://www.linkedin.com/in/joaomarcosribeirete/" target="_blank" rel="noopener noreferrer">
-            <img src="/icons/linkedin.svg" alt="LinkedIn" />
-          </a>
-        </aside>
 
         <div className="about-container">
           {/* Contêiner da Foto */}
           <div className="about-photo-container">
-            <img src="/icons/sobrefoto.png" alt="Minha Foto" className="about-photo" />
+            <img src={`${process.env.PUBLIC_URL}/icons/sobrefoto.png`} alt="Minha Foto" className="about-photo" />
           </div>
 
           {/* Texto "Sobre Mim" */}
@@ -45,28 +34,28 @@ const About = () => {
               <h1>Sobre Mim</h1>
               <div className="about-icons">
                 <img 
-                  src="/icons/spider.png" 
+                  src={`${process.env.PUBLIC_URL}/icons/spider.png`} 
                   alt="Spider-Man" 
                   className="about-icon" 
-                  onClick={() => playSound("spider.mp3")} 
+                  onClick={() => playSound("spider.MP3")} 
                 />
                 <img 
-                  src="/icons/95.png" 
+                  src={`${process.env.PUBLIC_URL}/icons/95.png`} 
                   alt="95" 
                   className="about-icon icon-95" 
                   onClick={() => playSound("katchau.mp3")} 
                 />
                 <img 
-                  src="/icons/thorfin.png" 
+                  src={`${process.env.PUBLIC_URL}/icons/thorfin.png`} 
                   alt="Thorfinn" 
                   className="about-icon thorfinn-icon" 
-                  onClick={() => playSound("thorfin.mp3")} 
+                  onClick={() => playSound("thorfin.MP3")} 
                 />
                 <img 
-                  src="/icons/flash.png" 
+                  src={`${process.env.PUBLIC_URL}/icons/flash.png`} 
                   alt="Flash" 
                   className="about-icon flash-icon" 
-                  onClick={() => playSound("flash.mp3")} 
+                  onClick={() => playSound("flash.MP3")} 
                 />
               </div>
             </div>
@@ -83,14 +72,14 @@ const About = () => {
               <strong> Adobe Premiere, Vegas PRO, DaVinci, Photoshop</strong> e <strong>Figma</strong> para criar vídeos e projetos de UI/UX. 
             </p>
             <p>
-              Minha jornada na tecnologia ganhou forma quando decidi cursar <strong>Ciência da Computação na PUC-SP.</strong>
-              A mudança para São Paulo foi um marco na minha vida — cheia de desafios, aprendizado e crescimento.
+              Minha jornada na tecnologia ganhou forma quando decidi cursar <strong>Ciência da Computação na PUC-SP</strong>. 
+               A mudança para São Paulo foi um marco na minha vida — cheia de desafios, aprendizado e crescimento.
               Aqui, descobri que para criar algo grandioso, o <strong>trabalho em equipe e a comunicação</strong> são fundamentais.
             </p>
             <p>
-              Entre uma linha de código e outra, gosto de manter o equilíbrio praticando esportes como <strong>musculação e futebol.</strong> 
+              Entre uma linha de código e outra, gosto de manter o equilíbrio praticando esportes como <strong>musculação e futebol</strong>. 
               Mas meu lado nerd não fica de fora – <strong>jogos, filmes de ficção e animações</strong> fazem parte do que me inspira a criar e 
-              a explorar novas ideias. A música também é uma grande companheira, dá uma olhada no meu perfil no  
+              a explorar novas ideias. A música também é uma grande companheira, dá uma olhada no meu perfil la 
               no  
               <span style={{ marginRight: "1px" }}> </span> {/* Adiciona espaçamento antes do link */}
               <a href="https://open.spotify.com/user/22lseke5ukek7jgd4sepaacoy?si=81add31631224262" 

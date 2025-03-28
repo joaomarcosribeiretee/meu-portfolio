@@ -25,7 +25,7 @@ const LoadingScreen = ({ onLoadingComplete }) => {
     <div className={`loading-screen ${isFadingOut ? "fade-out" : ""}`}>
       <div className="circle" style={{ "--progress": `${progress}%` }}>
         <img
-          src="/icons/foto.png" // Substitua pelo caminho da sua foto
+          src={`${process.env.PUBLIC_URL}/icons/foto.png`} // Substitua pelo caminho da sua foto
           alt="Foto do Usuário"
           className="profile-photo"
         />

@@ -12,21 +12,22 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #2A2A2A;
     color: white;
     font-family: "Inria Serif", serif;
     text-align: center;
+    
 }
 
 /* Wrapper para centralizar o conteúdo */
 .content-wrapper {
     max-width: 1400px;
     display: flex;
+    margin-top: 20px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: -40px;
 }
 
 /* Título principal */
@@ -59,8 +60,10 @@
 .projects-swiper {
     width: 100%;
     max-width: 1700px;
-    padding-bottom: 50px;
-}
+    padding-bottom: 30px; /* Reduza se estiver exagerado */
+    overflow: visible; /* importante para evitar cortes */
+  }
+  
 
 /* Estilização dos slides dos projetos */
 .project-slide {
@@ -72,8 +75,10 @@
     text-align: left;
     flex-direction: row;
     gap: 10px;
-}
-
+    padding-left: 120px; /* Novo: espaço p/ os ícones */
+    padding-right: 120px;
+  }
+  
 /* Ajuste específico para o primeiro slide */
 .first-slide {
     display: flex;
@@ -213,11 +218,13 @@
 }
 
 .wave-container2 {
-    position: absolute;
-    bottom: -10px; /* Reduzindo a posição inicial para descer um pouco */
-    left: 0;
     width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
     overflow: hidden;
+    pointer-events: none;
   }
   
   .wave-svg2 {
@@ -268,3 +275,50 @@
     transform: scale(1.05);
 }
 
+@media (max-width: 1024px) {
+    .projects-title {
+      font-size: 60px;
+    }
+  
+    .project-title {
+      font-size: 50px;
+    }
+  
+    .project-media {
+      max-width: 90%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .project-slide {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+  
+    .project-media-container {
+      max-width: 100%;
+      justify-content: center;
+    }
+  
+    .project-title {
+      font-size: 40px;
+      text-align: center;
+    }
+  
+    .project-subtitle {
+      font-size: 18px;
+      text-align: center;
+    }
+  
+    .project-description {
+      font-size: 0.95rem;
+      text-align: center;
+    }
+  
+    .project-text {
+      align-items: center;
+      text-align: center;
+    }
+  }
+  

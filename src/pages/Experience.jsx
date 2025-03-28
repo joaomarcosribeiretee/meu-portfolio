@@ -5,22 +5,11 @@ import "../styles/Experience.css";
 const Experience = () => {
   return (
     <PageTransition2>
-          <aside className="social-icons">
-          <a href="https://www.instagram.com/joaomarcosribeirete/" target="_blank" rel="noopener noreferrer">
-            <img src="/icons/instagram.svg" alt="Instagram" className="social-icon" />
-          </a>
-          <a href="https://github.com/joaomarcosribeiretee" target="_blank" rel="noopener noreferrer">
-            <img src="/icons/github.svg" alt="GitHub" className="social-icon" />
-          </a>
-          <a href="https://www.linkedin.com/in/joaomarcosribeirete/" target="_blank" rel="noopener noreferrer">
-            <img src="/icons/linkedin.svg" alt="LinkedIn" className="social-icon" />
-          </a>
-        </aside>
       <div className="experience-container">
 
         
         <div className="corner-decor3">
-          <img src="/icons/Retangulos2.png" alt="Decoração" />
+          <img src={`${process.env.PUBLIC_URL}/icons/Retangulos2.png`} alt="Decoração" />
         </div>
 
         <div className="content-wrapper">
@@ -28,7 +17,7 @@ const Experience = () => {
 
           <div className="experience-item">
             <div className="timeline">
-              <img src="/icons/Circle.png" alt="Circle Icon" className="circle-icon" />
+              <img src={`${process.env.PUBLIC_URL}/icons/Circle.png`} alt="Circle Icon" className="circle-icon" />
               <div className="timeline-line"></div>
             </div>
             <div className="experience-info">
@@ -43,7 +32,7 @@ const Experience = () => {
 
           <div className="experience-item">
             <div className="timeline">
-              <img src="/icons/Circle.png" alt="Circle Icon" className="circle-icon" />
+              <img src={`${process.env.PUBLIC_URL}/icons/Circle.png`} alt="Circle Icon" className="circle-icon" />
               <div className="timeline-line2"></div>
             </div>
             <div className="experience-info">
@@ -58,7 +47,7 @@ const Experience = () => {
 
           <div className="experience-item">
             <div className="timeline">
-              <img src="/icons/Circle.png" alt="Circle Icon" className="circle-icon" />
+              <img src={`${process.env.PUBLIC_URL}/icons/Circle.png`} alt="Circle Icon" className="circle-icon" />
               <div className="timeline-line3"></div>
             </div>
             <div className="experience-info">

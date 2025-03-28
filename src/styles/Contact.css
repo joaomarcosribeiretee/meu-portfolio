@@ -1,131 +1,173 @@
+/* ======================== */
+/* Fonte e Cursor Global   */
+/* ======================== */
 @import url("https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300;400;700&family=Inria+Sans:wght@300;400;700&display=swap");
+
 body {
-    cursor: url(https://cur.cursors-4u.net/cursors/cur-5/cur425.cur), auto !important;
-  }
-
-
-.contact-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start; /* Move para a esquerda */
-    height: 100vh;
-    background-color: #2A2A2A;
-    color: white;
-    font-family: "Inria Serif", serif;
-    padding-left: 8%;
-    padding-top: -20px; /* Move os elementos um pouco para cima */
+  cursor: url(https://cur.cursors-4u.net/cursors/cur-5/cur425.cur), auto !important;
+  margin: 0;
+  padding: 0;
+  font-family: "Inria Serif", serif;
 }
 
-/* Estilização do formulário */
+/* ======================== */
+/* Container Principal      */
+/* ======================== */
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  background-color: #2a2a2a;
+  color: white;
+  padding: 60px 8rem 60px 3rem; /* top | right | bottom | left */
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+/* ======================== */
+/* Formulário               */
+/* ======================== */
 .contact-form {
-    max-width: 700px;
-    width: 100%;
-    text-align: left; /* Alinhar todo o texto para a esquerda */
-    margin-left: 10%;
-    margin-bottom: 100px;
+  max-width: 700px;
+  width: 100%;
+  text-align: left;
+  margin-left: 10%;
+  margin-bottom: 100px;
 }
 
 .contact-title {
-    font-size: 90px;
-    font-weight: bold;
-    margin-bottom: 1px;
+  font-size: 4.5rem;
+  font-weight: bold;
+  margin-bottom: 1px;
 }
 
 .contact-description {
-    font-size: 17px;
-    margin-bottom: 25px;
+  font-size: 1.1rem;
+  margin-bottom: 25px;
 }
 
 .contact-description a {
-    font-weight: bold;
-    color: white;
-    text-decoration: none;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
 }
 
 .contact-description a:hover {
-    text-decoration: underline;
-    cursor: url(https://cur.cursors-4u.net/cursors/cur-7/cur638.cur), auto !important;
+  text-decoration: underline;
+  cursor: url(https://cur.cursors-4u.net/cursors/cur-7/cur638.cur), auto !important;
 }
 
-/* Campos do formulário */
+/* ======================== */
+/* Campos do Formulário     */
+/* ======================== */
 input,
 textarea {
-    width: 95%;
-    padding: 16px;
-    margin-bottom: 25px;
-    border: 1.5px solid #737373;
-    background: #2A2A2A;
-    color: white;
-    font-size: 17px;
-    border-radius: 10px;
-    font-family: 'Inria Sans', sans-serif; /* Aplica a nova fonte */
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 25px;
+  border: 1.5px solid #737373;
+  background: #2a2a2a;
+  color: white;
+  font-size: 1rem;
+  border-radius: 10px;
+  font-family: "Inria Sans", sans-serif;
 }
 
 textarea {
-    height: 120px;
-    resize: none;
+  height: 120px;
+  resize: none;
 }
 
-/* Botões lado a lado */
+/* ======================== */
+/* Botões                   */
+/* ======================== */
 .form-buttons {
-    display: flex;
-    justify-content: space-between; /* Distribui os botões uniformemente */
-    gap: 90px; /* Ajuste o espaçamento entre os botões */
-    margin-top: 10px; /* Adiciona um pequeno espaço acima dos botões */
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .submit-btn,
 .download-btn {
-    flex: 1; /* Faz os botões ocuparem tamanhos iguais */
-    padding: 1px;
-    font-size: 24px;
-    font-weight: bold;
-    border-radius: 5px;
-    text-align: center;
-    cursor: pointer;
-    transition: 0.3s;
-    border: 1px solid white;
-    background: transparent;
-    color: white;
-    text-decoration: none;
-    font-family: 'Inria Sans', sans-serif; /* Aplica a nova fonte */
-}
-
-.submit-btn,
-.download-btn {
-    flex: 0; /* Remove a expansão automática dos botões */
-    width: 350px; /* Define um tamanho fixo para os botões */
-    padding: 15px 80px; /* Reduz o padding interno */
-    font-size: 20px; /* Reduz o tamanho do texto dentro do botão */
+  padding: 15px 40px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+  font-family: "Inria Sans", sans-serif;
+  width: 100%;
+  max-width: 320px;
 }
 
 .submit-btn {
-    background-color: white;
-    color: #2A2A2A;
-    border: 1px solid white;
-    border-radius: 15px;
+  background-color: white;
+  color: #2a2a2a;
+  border: 1px solid white;
 }
 
 .download-btn {
-    border: 1px solid #737373;
-    background: transparent;
-    color: #737373;
-    border-radius: 15px;
+  border: 1px solid #737373;
+  background: transparent;
+  color: #737373;
 }
 
-/* Efeito ao passar o mouse */
 .download-btn:hover {
-    border: 1px solid #2D1BD6;
-    background-color: #2D1BD6;
-    color: #ffffff;
-    cursor: url(https://cur.cursors-4u.net/cursors/cur-7/cur638.cur), auto !important;
+  border: 1px solid #2d1bd6;
+  background-color: #2d1bd6;
+  color: #ffffff;
+  cursor: url(https://cur.cursors-4u.net/cursors/cur-7/cur638.cur), auto !important;
 }
-
 
 .submit-btn:hover {
-    border: 1px solid #000000;
-    background-color: #FFD730;
-    color: #000000;
-    cursor: url(https://cur.cursors-4u.net/cursors/cur-7/cur638.cur), auto !important;
+  border: 1px solid #000000;
+  background-color: #ffd730;
+  color: #000000;
+  cursor: url(https://cur.cursors-4u.net/cursors/cur-7/cur638.cur), auto !important;
 }
 
+/* ======================== */
+/* Responsividade           */
+/* ======================== */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 1rem;
+  }
+
+  .contact-form {
+    margin-left: 0;
+  }
+
+  .contact-title {
+    font-size: 2.5rem;
+  }
+
+  .contact-description {
+    font-size: 1rem;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .submit-btn,
+  .download-btn {
+    width: 100%;
+    max-width: none;
+  }
+
+  .social-icons {
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding-top: 10px;
+  }
+}
